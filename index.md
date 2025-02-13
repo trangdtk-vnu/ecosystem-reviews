@@ -10,7 +10,7 @@ A structured repository for systematic reviews on climate change and related top
 ## 🌟 Institutional Partners  
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="/assets/images/uhasselt.png" alt="Hasselt University" width="150">
-  <img src="/assets/images/pik.png" alt="Potsdam Institute for Climate Impact Research (PIK)" width="150">
-  <img src="/assets/images/AUN.png" alt="Australian National University (ANU)" width="150">
+  <img src="/assets/images/uhasselt.png" width="50">
+  <img src="/assets/images/pik.png" width="50">
+  <img src="/assets/images/AUN.png" width="50">
 </div>
