@@ -1,17 +1,22 @@
 ---
 layout: default
-title: Call for Reviews
-nav_order: 3
+title: Ecosystems of Reviews
+nav_order: 2
 ---
 
-# 📢 Call for Reviews  
+# 📚 Ecosystems of Reviews  
 
-## ❗ Open Topics for Review  
-A list of topics requiring systematic reviews. Researchers are encouraged to contribute!
+## 🔍 Find Existing Reviews  
+A list of systematic reviews categorized by topic.
 
-- **Climate Policy** – Gaps in carbon taxation effectiveness.
-- **Renewable Energy** – Efficiency of green subsidies.
-- **Biodiversity Conservation** – Impact of habitat restoration programs.
+- Graphical representation of **existing** and **missing** reviews.
+- Topics marked as **“review in progress”** to avoid duplication.
+- Community contribution: [Suggest a topic](#).
 
-## 🚀 Submit Your Review  
-[Submit a new topic](#) or indicate interest in an ongoing review.
+## 📝 Planned Reviews  
+- List of reviews **in progress**.
+- Submit planned reviews for inclusion.
+
+[🔄 Back to Home](index.md)
+
+---
