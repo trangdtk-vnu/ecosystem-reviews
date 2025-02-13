@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Ecosystems of Reviews
-nav_order: 2
 ---
 
 # 📚 Ecosystems of Reviews  
