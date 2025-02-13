@@ -1,0 +1,30 @@
+# GitHub Pages Configuration for Ecosystem Reviews
+
+# Site settings
+title: "Ecosystem of Reviews"
+description: "A collaborative space for systematic reviews on climate change and related topics."
+baseurl: "" # Leave blank unless using a subpath
+domain: "" # Custom domain (to be added later)
+
+# Theme (using a minimal Jekyll theme)
+theme: jekyll-theme-minimal
+
+# Navigation
+navbar:
+  - title: "Home"
+    url: "/"
+  - title: "Ecosystems of Reviews"
+    url: "/ecosystems/"
+  - title: "Call for Reviews"
+    url: "/call-for-reviews/"
+  - title: "Systematic Maps"
+    url: "/systematic-maps/"
+  - title: "Pre-Analysis Plan"
+    url: "/pre-analysis-plan/"
+  - title: "Policy Reports"
+    url: "/policy-reports/"
+
+# Plugins (for Markdown support)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
