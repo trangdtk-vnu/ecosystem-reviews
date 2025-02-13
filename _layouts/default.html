@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1><a href="{{ '/' | relative_url }}">Ecosystem of Reviews</a></h1>
+            </div>
+            <div>
+                <img src="/assets/images/uhasselt.png" alt="Hasselt University" width="80">
+                <img src="/assets/images/pik.png" alt="Potsdam Institute for Climate Impact Research (PIK)" width="80">
+                <img src="/assets/images/AUN.png" alt="Australian National University (ANU)" width="80">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/ecosystems' | relative_url }}">Ecosystems</a></li>
+            <li><a href="{{ '/call-for-reviews' | relative_url }}">Call for Reviews</a></li>
+            <li><a href="{{ '/systematic-maps' | relative_url }}">Systematic Maps</a></li>
+            <li><a href="{{ '/pre-analysis-plan' | relative_url }}">Pre-Analysis Plan</a></li>
+            <li><a href="{{ '/policy-reports' | relative_url }}">Policy Reports</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>© 2025 Ecosystem of Reviews</p>
+    </footer>
+</body>
+</html>
