@@ -1,23 +1,8 @@
 title: "Ecosystem of Reviews"
 description: "A structured repository for systematic reviews on climate change."
-theme: just-the-docs  
-# Update with your domain
+remote_theme: just-the-docs/just-the-docs
+#url: "https://yourcustomdomain.com"
 
-# Enable the navbar and sidebar navigation
+# Navigation
 nav_order: 1
 search_enabled: true
-
-# Navigation structure
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "Ecosystems of Reviews"
-    url: "/ecosystems"
-  - title: "Call for Reviews"
-    url: "/call-for-reviews"
-  - title: "Systematic Maps"
-    url: "/systematic-maps"
-  - title: "Pre-Analysis Plan"
-    url: "/pre-analysis-plan"
-  - title: "Policy Reports"
-    url: "/policy-reports"
