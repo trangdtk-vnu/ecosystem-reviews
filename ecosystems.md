@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Ecosystems of Reviews
+title: Ecosystems of Systematic Reviews
 nav_order: 2
 ---
 
-# 📚 Ecosystems of Reviews  
+# 📚 Ecosystems of Systematic Reviews  
 
 ## 🔍 Find Existing Reviews  
 A list of systematic reviews categorized by topic.
