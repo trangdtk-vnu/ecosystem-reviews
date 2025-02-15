@@ -23,16 +23,16 @@ header h1 a {
 }
 
 /* Institution logos */
+/* Keep the title on the left */
+header div:first-child {
+    flex-grow: 1; /* Ensures it takes up the available space */
+}
+
+/* Align logos to the right */
 header div:last-child {
     display: flex;
     align-items: center;
     gap: 10px; /* Adjust spacing between logos */
-    margin-left: auto; /* Push logos to the right */
-}
-
-header div img {
-    height: 50px;
-    margin-left: 0; /* Remove left margin to avoid extra spacing */
 }
 
 /* Navigation menu */
