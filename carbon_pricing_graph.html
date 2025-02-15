@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Pricing Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .node {
+            fill: white;
+            stroke: #a67c00;
+            stroke-width: 2;
+            cursor: pointer;
+        }
+        .node:hover {
+            fill: #f1c40f;
+            transition: 0.3s;
+        }
+        .text {
+            font-size: 14px;
+            text-anchor: middle;
+            font-weight: bold;
+        }
+        .center-text {
+            font-size: 20px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+        .line {
+            stroke: #333;
+            stroke-dasharray: 5,5;
+            stroke-width: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<svg id="carbonGraph" width="600" height="400"></svg>
+
+<script>
+    const svg = d3.select("#carbonGraph");
+    const width = +svg.attr("width");
+    const height = +svg.attr("height");
+
+    // Center text
+    svg.append("text")
+        .attr("class", "center-text")
+        .attr("x", width / 2)
+        .attr("y", height / 2)
+        .text("Ex-post Evidence on Carbon Pricing");
+
+    // Data for bubbles
+    const data = [
+        { text: "Effectiveness", x: 150, y: 150 },
+        { text: "Labour market", x: 150, y: 250 },
+        { text: "Innovation", x: 250, y: 300 },
+        { text: "Leakage", x: 350, y: 300 },
+        { text: "Public perception", x: 450, y: 250 },
+        { text: "Competitiveness", x: 450, y: 150 },
+        { text: "Distribution", x: 300, y: 100 },
+        { text: "...", x: 550, y: 200 }
+    ];
+
+    // Draw circles
+    const nodes = svg.selectAll(".node")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("class", "node")
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+        .attr("r", 50);
+
+    // Connect lines
+    data.forEach(d => {
+        svg.append("line")
+            .attr("class", "line")
+            .attr("x1", width / 2)
+            .attr("y1", height / 2)
+            .attr("x2", d.x)
+            .attr("y2", d.y);
+    });
+
+    // Add text labels
+    svg.selectAll(".text")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "text")
+        .attr("x", d => d.x)
+        .attr("y", d => d.y + 5)
+        .text(d => d.text);
+</script>
+
+</body>
+</html>
