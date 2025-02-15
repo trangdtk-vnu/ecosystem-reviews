@@ -3,6 +3,6 @@ layout: default
 title: Home
 ---
 
-# 🌍 Welcome to the Ecosystem of Reviews  
+# 🌍 Welcome to the Ecosystem of Systematic Reviews  
 
-A structured repository for systematic reviews on climate change and related topics.
+<iframe src="/carbon_pricing_graph.html" width="600" height="400" style="border:none;"></iframe>
