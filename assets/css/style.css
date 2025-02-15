@@ -23,10 +23,11 @@ header h1 a {
 }
 
 /* Institution logos */
-header div {
+header div:last-child {
     display: flex;
-    justify-content: flex-end; /* Align logos to the right */
+    align-items: center;
     gap: 10px; /* Adjust spacing between logos */
+    margin-left: auto; /* Push logos to the right */
 }
 
 header div img {
