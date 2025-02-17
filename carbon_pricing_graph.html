@@ -7,7 +7,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,15 +19,18 @@
             stroke: #a67c00;
             stroke-width: 2;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out;
         }
         .node:hover {
             fill: #f1c40f;
-            transition: 0.3s;
+            transform: scale(1.1);
         }
         .text {
             font-size: 14px;
             text-anchor: middle;
             font-weight: bold;
+            fill: #333;
+            pointer-events: none;
         }
         .center-text {
             font-size: 20px;
@@ -36,9 +39,9 @@
             text-anchor: middle;
         }
         .line {
-            stroke: #333;
-            stroke-dasharray: 5,5;
+            stroke: #555;
             stroke-width: 1.5;
+            stroke-linecap: round;
         }
     </style>
 </head>
@@ -62,11 +65,11 @@
     const data = [
         { text: "Effectiveness", x: 150, y: 150 },
         { text: "Labour market", x: 150, y: 250 },
-        { text: "Innovation", x: 250, y: 300 },
-        { text: "Leakage", x: 350, y: 300 },
+        { text: "Innovation", x: 250, y: 350 },
+        { text: "Leakage", x: 350, y: 350 },
         { text: "Public perception", x: 450, y: 250 },
         { text: "Competitiveness", x: 450, y: 150 },
-        { text: "Distribution", x: 300, y: 100 },
+        { text: "Distribution", x: 300, y: 80 },
         { text: "...", x: 550, y: 200 }
     ];
 
@@ -78,16 +81,20 @@
         .attr("class", "node")
         .attr("cx", d => d.x)
         .attr("cy", d => d.y)
-        .attr("r", 50);
+        .attr("r", 45)
+        .on("mouseover", function() {
+            d3.select(this).transition().duration(200).attr("r", 50);
+        })
+        .on("mouseout", function() {
+            d3.select(this).transition().duration(200).attr("r", 45);
+        });
 
-    // Connect lines
+    // Connect lines with Bezier curves
     data.forEach(d => {
-        svg.append("line")
+        svg.append("path")
             .attr("class", "line")
-            .attr("x1", width / 2)
-            .attr("y1", height / 2)
-            .attr("x2", d.x)
-            .attr("y2", d.y);
+            .attr("d", `M${width / 2},${height / 2} Q${(width / 2 + d.x) / 2},${(height / 2 + d.y) / 2} ${d.x},${d.y}`)
+            .attr("fill", "none");
     });
 
     // Add text labels
