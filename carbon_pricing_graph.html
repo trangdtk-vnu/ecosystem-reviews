@@ -28,14 +28,12 @@
             font-size: 14px;
             text-anchor: middle;
             font-weight: bold;
-            dominant-baseline: middle;
         }
         .center-text {
             font-size: 20px;
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
-            dominant-baseline: middle;
         }
         .line {
             stroke: #333;
@@ -51,11 +49,11 @@
     const svg = d3.select("#carbonGraph");
     const width = +svg.attr("width");
     const height = +svg.attr("height");
-    
+
+    // Center text
     const centerX = width / 2;
     const centerY = height / 2;
 
-    // Center text
     svg.append("text")
         .attr("class", "center-text")
         .attr("x", centerX)
@@ -64,27 +62,35 @@
 
     // Data for ellipses
     const data = [
-        { text: "Effectiveness", x: centerX + 200, y: centerY },
-        { text: "Labour market", x: centerX - 200, y: centerY + 100 },
-        { text: "Innovation", x: centerX, y: centerY - 150 },
-        { text: "Leakage", x: centerX + 100, y: centerY + 200 },
-        { text: "Public perception", x: centerX - 150, y: centerY - 100 },
-        { text: "Competitiveness", x: centerX + 250, y: centerY - 50 },
-        { text: "Distribution", x: centerX - 50, y: centerY + 250 },
-        { text: "...", x: centerX - 250, y: centerY }
+        { text: "Effectiveness", x: 150, y: 150 },
+        { text: "Labour market", x: 150, y: 250 },
+        { text: "Innovation", x: 250, y: 350 },
+        { text: "Leakage", x: 450, y: 350 },
+        { text: "Public perception", x: 550, y: 250 },
+        { text: "Competitiveness", x: 550, y: 150 },
+        { text: "Distribution", x: 350, y: 100 },
+        { text: "...", x: 650, y: 200 }
     ];
 
-    // Draw connecting lines
+    // Draw lines but make them stop **before the center text**
     data.forEach(d => {
+        const dx = d.x - centerX;
+        const dy = d.y - centerY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const stopDistance = 80; // Adjust this to stop before text
+        
+        const newX = centerX + (dx / distance) * stopDistance;
+        const newY = centerY + (dy / distance) * stopDistance;
+
         svg.append("line")
             .attr("class", "line")
-            .attr("x1", centerX)
-            .attr("y1", centerY + 20)  // Adjusted to prevent overlap
+            .attr("x1", newX)
+            .attr("y1", newY)
             .attr("x2", d.x)
             .attr("y2", d.y);
     });
 
-    // Draw ellipses
+    // Draw ellipses instead of circles
     const nodes = svg.selectAll(".node")
         .data(data)
         .enter()
@@ -92,17 +98,17 @@
         .attr("class", "node")
         .attr("cx", d => d.x)
         .attr("cy", d => d.y)
-        .attr("rx", 70)  // Wider for better text fit
+        .attr("rx", 60)  // Wider than tall
         .attr("ry", 40);
 
-    // Add text labels
+    // Add text labels inside ellipses
     svg.selectAll(".text")
         .data(data)
         .enter()
         .append("text")
         .attr("class", "text")
         .attr("x", d => d.x)
-        .attr("y", d => d.y)
+        .attr("y", d => d.y + 5)
         .text(d => d.text);
 </script>
 
