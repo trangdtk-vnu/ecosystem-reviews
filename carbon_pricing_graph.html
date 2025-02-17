@@ -13,6 +13,7 @@
             align-items: center;
             height: 100vh;
             background-color: #f8f9fa;
+            margin: 0;
         }
         .node {
             fill: white;
@@ -53,59 +54,70 @@
     const svg = d3.select("#carbonGraph");
     const width = +svg.attr("width");
     const height = +svg.attr("height");
+    const centerX = width / 2;
+    const centerY = height / 2;
 
     // Center text
     svg.append("text")
         .attr("class", "center-text")
-        .attr("x", width / 2)
-        .attr("y", height / 2)
+        .attr("x", centerX)
+        .attr("y", centerY)
         .text("Ex-post Evidence on Carbon Pricing");
 
     // Data for bubbles
     const data = [
-        { text: "Effectiveness", x: 150, y: 150 },
-        { text: "Labour market", x: 150, y: 250 },
-        { text: "Innovation", x: 250, y: 350 },
-        { text: "Leakage", x: 350, y: 350 },
-        { text: "Public perception", x: 450, y: 250 },
-        { text: "Competitiveness", x: 450, y: 150 },
-        { text: "Distribution", x: 300, y: 80 },
-        { text: "...", x: 550, y: 200 }
+        { text: "Effectiveness" },
+        { text: "Labour market" },
+        { text: "Innovation" },
+        { text: "Leakage" },
+        { text: "Public perception" },
+        { text: "Competitiveness" },
+        { text: "Distribution" },
+        { text: "..." }
     ];
 
-    // Draw circles
-    const nodes = svg.selectAll(".node")
-        .data(data)
-        .enter()
-        .append("circle")
-        .attr("class", "node")
-        .attr("cx", d => d.x)
-        .attr("cy", d => d.y)
-        .attr("r", 45)
-        .on("mouseover", function() {
-            d3.select(this).transition().duration(200).attr("r", 50);
-        })
-        .on("mouseout", function() {
-            d3.select(this).transition().duration(200).attr("r", 45);
+    const simulation = d3.forceSimulation(data)
+        .force("charge", d3.forceManyBody().strength(-200)) // Repel nodes
+        .force("center", d3.forceCenter(centerX, centerY))
+        .force("collision", d3.forceCollide().radius(55)) // Prevent overlap
+        .force("radial", d3.forceRadial(180, centerX, centerY)) // Spread out evenly
+        .on("tick", ticked);
+
+    function ticked() {
+        svg.selectAll("line").remove();
+        svg.selectAll("circle").remove();
+        svg.selectAll("text.node-label").remove();
+
+        // Draw lines
+        data.forEach(d => {
+            svg.append("line")
+                .attr("class", "line")
+                .attr("x1", centerX)
+                .attr("y1", centerY)
+                .attr("x2", d.x)
+                .attr("y2", d.y);
         });
 
-    // Connect lines with Bezier curves
-    data.forEach(d => {
-        svg.append("path")
-            .attr("class", "line")
-            .attr("d", `M${width / 2},${height / 2} Q${(width / 2 + d.x) / 2},${(height / 2 + d.y) / 2} ${d.x},${d.y}`)
-            .attr("fill", "none");
-    });
+        // Draw circles
+        svg.selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("class", "node")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", 45);
 
-    // Add text labels
-    svg.selectAll(".text")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "text")
-        .attr("x", d => d.x)
-        .attr("y", d => d.y + 5)
-        .text(d => d.text);
+        // Add text labels
+        svg.selectAll("text.node-label")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "text node-label")
+            .attr("x", d => d.x)
+            .attr("y", d => d.y + 5)
+            .text(d => d.text);
+    }
 </script>
 
 </body>
