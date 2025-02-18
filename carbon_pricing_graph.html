@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Carbon Pricing Graph</title>
+    <title>Carbon Pricing Graph</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body {
@@ -21,30 +21,31 @@
         }
         .node {
             fill: white;
-            stroke: #a67c00;
+            stroke: #0077b6;
             stroke-width: 2;
             cursor: grab;
+            transition: fill 0.3s ease;
         }
         .node:hover {
-            fill: #f1c40f;
-            transition: 0.3s;
+            fill: #00b4d8;
         }
         .text {
-            font-size: 12px;
+            font-size: 14px;
             text-anchor: middle;
             font-weight: bold;
             pointer-events: none;
         }
         .center-text {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
             dominant-baseline: middle;
         }
         .link {
-            stroke: #333;
-            stroke-width: 1.5;
+            stroke: #999;
+            stroke-width: 2;
+            stroke-opacity: 0.7;
         }
     </style>
 </head>
@@ -60,10 +61,9 @@
         .attr("width", width)
         .attr("height", height);
 
-    const centerNode = { id: "Ex-post Evidence on Carbon Pricing", fx: width / 2, fy: height / 2 };
-
+    // Define nodes
     const nodes = [
-        centerNode,
+        { id: "Ex-post Evidence on Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true },
         { id: "Effectiveness" },
         { id: "Labour market" },
         { id: "Innovation" },
@@ -74,34 +74,39 @@
         { id: "..." }
     ];
 
-    const links = nodes.slice(1).map(node => ({ source: centerNode.id, target: node.id }));
+    // Define links
+    const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
 
+    // Create force simulation
     const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id).distance(150))
         .force("charge", d3.forceManyBody().strength(-300))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .on("tick", ticked);
 
+    // Create link elements
     const link = svg.selectAll(".link")
         .data(links)
         .enter().append("line")
         .attr("class", "link");
 
+    // Create node elements
     const node = svg.selectAll(".node")
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", 70)
+        .attr("rx", 80)
         .attr("ry", 40)
         .call(d3.drag()
             .on("start", dragStarted)
             .on("drag", dragged)
             .on("end", dragEnded));
 
+    // Add text labels
     const labels = svg.selectAll(".text")
         .data(nodes)
         .enter().append("text")
-        .attr("class", d => d === centerNode ? "center-text" : "text")
+        .attr("class", d => d.fixed ? "center-text" : "text")
         .text(d => d.id);
 
     function ticked() {
@@ -121,7 +126,7 @@
     }
 
     function dragStarted(event, d) {
-        if (!d.fx) simulation.alphaTarget(0.3).restart();
+        if (!d.fixed) simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
@@ -132,7 +137,7 @@
     }
 
     function dragEnded(event, d) {
-        if (d !== centerNode) {
+        if (!d.fixed) {
             d.fx = null;
             d.fy = null;
         }
