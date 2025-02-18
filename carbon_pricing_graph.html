@@ -36,7 +36,7 @@
             pointer-events: none;
         }
         .center-text {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
@@ -63,7 +63,7 @@
 
     // Define nodes
     const nodes = [
-        { id: "Ex-post Evidence on Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true },
+        { id: "Ex-post\nEvidence on\nCarbon Pricing", fx: width / 2, fy: height / 2, fixed: true },
         { id: "Effectiveness" },
         { id: "Labour market" },
         { id: "Innovation" },
@@ -77,11 +77,12 @@
     // Define links
     const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
 
-    // Create force simulation
+    // Create force simulation with stronger repulsion to avoid overlap
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(150))
-        .force("charge", d3.forceManyBody().strength(-300))
+        .force("link", d3.forceLink(links).id(d => d.id).distance(180)) // Increase distance
+        .force("charge", d3.forceManyBody().strength(-500)) // Stronger repulsion
         .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collision", d3.forceCollide().radius(90)) // Prevent overlap
         .on("tick", ticked);
 
     // Create link elements
@@ -95,19 +96,25 @@
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", 80)
-        .attr("ry", 40)
+        .attr("rx", d => d.fixed ? 100 : 80) // Wider center node
+        .attr("ry", d => d.fixed ? 60 : 40)  // Taller center node
         .call(d3.drag()
             .on("start", dragStarted)
             .on("drag", dragged)
             .on("end", dragEnded));
 
-    // Add text labels
+    // Add text labels (handles multi-line for center)
     const labels = svg.selectAll(".text")
         .data(nodes)
         .enter().append("text")
         .attr("class", d => d.fixed ? "center-text" : "text")
-        .text(d => d.id);
+        .attr("dy", d => d.fixed ? "-10px" : "5px") // Adjust for center multi-line
+        .selectAll("tspan")
+        .data(d => d.id.split("\n")) // Split text for multi-line effect
+        .enter().append("tspan")
+        .attr("x", d => nodes.find(n => n.id.includes("Ex-post"))?.x)
+        .attr("dy", (_, i) => i === 0 ? 0 : "1.2em")
+        .text(d => d);
 
     function ticked() {
         link
