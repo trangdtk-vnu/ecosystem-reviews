@@ -17,7 +17,8 @@
         }
         svg {
             display: block;
-            margin: auto;
+            max-width: 90%;
+            max-height: 90vh;
         }
         .node {
             fill: white;
@@ -30,12 +31,12 @@
             transition: 0.3s;
         }
         .text {
-            font-size: 14px;
+            font-size: 12px; /* Reduced from 14px */
             text-anchor: middle;
             font-weight: bold;
         }
         .center-text {
-            font-size: 24px;
+            font-size: 18px; /* Reduced from 24px */
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
@@ -49,13 +50,12 @@
 </head>
 <body>
 
-<svg id="carbonGraph" width="100%" height="100vh"></svg>
+<svg id="carbonGraph" width="800" height="600"></svg>
 
 <script>
     const svg = d3.select("#carbonGraph");
-    const width = window.innerWidth * 0.7;
-    const height = window.innerHeight * 0.7;
-    svg.attr("viewBox", `0 0 ${width} ${height}`);
+    const width = +svg.attr("width");
+    const height = +svg.attr("height");
 
     // Center text coordinates
     const centerX = width / 2;
@@ -85,7 +85,7 @@
         const dx = d.x - centerX;
         const dy = d.y - centerY;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const stopDistance = 70;
+        const stopDistance = 50;
 
         const newX = centerX + (dx / distance) * stopDistance;
         const newY = centerY + (dy / distance) * stopDistance;
@@ -106,8 +106,8 @@
         .attr("class", "node")
         .attr("cx", d => d.x)
         .attr("cy", d => d.y)
-        .attr("rx", 70)  // Making ellipses wider
-        .attr("ry", 40); // Taller to fit text
+        .attr("rx", 60)  // Reduced from 70
+        .attr("ry", 30); // Reduced from 40
 
     // Add text inside ellipses
     svg.selectAll(".text")
