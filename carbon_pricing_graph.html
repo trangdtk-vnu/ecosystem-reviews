@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon Pricing Graph</title>
+    <title>Interactive Carbon Pricing Graph</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body {
@@ -17,101 +17,122 @@
         }
         svg {
             display: block;
-            width: 90%;
-            height: auto;
+            width: 90vw;
+            height: 90vh;
         }
         .node {
             fill: white;
             stroke: #a67c00;
-            stroke-width: 1.5;
-            cursor: pointer;
+            stroke-width: 2;
+            cursor: grab;
         }
         .node:hover {
             fill: #f1c40f;
             transition: 0.3s;
         }
         .text {
-            font-size: 10px; /* Reduced from 12px */
+            font-size: 14px;
             text-anchor: middle;
             font-weight: bold;
+            pointer-events: none;
         }
         .center-text {
-            font-size: 16px; /* Reduced from 18px */
+            font-size: 20px;
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
-            dominant-baseline: central;
+            dominant-baseline: middle;
         }
-        .line {
+        .link {
             stroke: #333;
-            stroke-width: 1.2;
+            stroke-width: 1.5;
         }
     </style>
 </head>
 <body>
 
-<svg id="carbonGraph" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet"></svg>
+<svg id="carbonGraph" viewBox="-400 -300 800 600" preserveAspectRatio="xMidYMid meet"></svg>
 
 <script>
-    const svg = d3.select("#carbonGraph");
-    const width = 800;
-    const height = 600;
+    const width = 800, height = 600;
 
-    const centerX = width / 2;
-    const centerY = height / 2;
-
-    svg.append("text")
-        .attr("class", "center-text")
-        .attr("x", centerX)
-        .attr("y", centerY)
-        .text("Ex-post Evidence on Carbon Pricing");
-
-    const data = [
-        { text: "Effectiveness", x: centerX - 160, y: centerY - 80 },
-        { text: "Labour market", x: centerX - 160, y: centerY + 80 },
-        { text: "Innovation", x: centerX, y: centerY + 160 },
-        { text: "Leakage", x: centerX + 160, y: centerY + 80 },
-        { text: "Public perception", x: centerX + 160, y: centerY - 80 },
-        { text: "Competitiveness", x: centerX + 40, y: centerY - 120 },
-        { text: "Distribution", x: centerX - 80, y: centerY - 140 },
-        { text: "...", x: centerX + 240, y: centerY }
+    const nodes = [
+        { id: "Ex-post Evidence on Carbon Pricing", fx: 0, fy: 0, fixed: true },
+        { id: "Effectiveness" },
+        { id: "Labour market" },
+        { id: "Innovation" },
+        { id: "Leakage" },
+        { id: "Public perception" },
+        { id: "Competitiveness" },
+        { id: "Distribution" },
+        { id: "..." }
     ];
 
-    data.forEach(d => {
-        const dx = d.x - centerX;
-        const dy = d.y - centerY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        const stopDistance = 45; // Reduced further
+    const links = nodes.slice(1).map(node => ({ source: "Ex-post Evidence on Carbon Pricing", target: node.id }));
 
-        const newX = centerX + (dx / distance) * stopDistance;
-        const newY = centerY + (dy / distance) * stopDistance;
+    const svg = d3.select("#carbonGraph");
 
-        svg.append("line")
-            .attr("class", "line")
-            .attr("x1", newX)
-            .attr("y1", newY)
-            .attr("x2", d.x)
-            .attr("y2", d.y);
+    const simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(120))
+        .force("charge", d3.forceManyBody().strength(-200))
+        .force("center", d3.forceCenter(0, 0));
+
+    const link = svg.selectAll(".link")
+        .data(links)
+        .enter().append("line")
+        .attr("class", "link");
+
+    const node = svg.selectAll(".node")
+        .data(nodes)
+        .enter().append("ellipse")
+        .attr("class", "node")
+        .attr("rx", 80)  // Adaptive size
+        .attr("ry", 40)
+        .call(d3.drag()
+            .on("start", dragStarted)
+            .on("drag", dragged)
+            .on("end", dragEnded));
+
+    const labels = svg.selectAll(".text")
+        .data(nodes)
+        .enter().append("text")
+        .attr("class", d => d.fixed ? "center-text" : "text")
+        .text(d => d.id);
+
+    simulation.on("tick", () => {
+        link
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+
+        node
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y);
+
+        labels
+            .attr("x", d => d.x)
+            .attr("y", d => d.y + 5);
     });
 
-    svg.selectAll(".node")
-        .data(data)
-        .enter()
-        .append("ellipse")
-        .attr("class", "node")
-        .attr("cx", d => d.x)
-        .attr("cy", d => d.y)
-        .attr("rx", 40)  // Reduced from 50
-        .attr("ry", 25); // Reduced from 30
+    function dragStarted(event, d) {
+        if (!d.fixed) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
 
-    svg.selectAll(".text")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "text")
-        .attr("x", d => d.x)
-        .attr("y", d => d.y + 5)
-        .text(d => d.text);
+    function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+    }
+
+    function dragEnded(event, d) {
+        if (!d.fixed) {
+            d.fx = null;
+            d.fy = null;
+        }
+        simulation.alphaTarget(0);
+    }
 </script>
 
 </body>
