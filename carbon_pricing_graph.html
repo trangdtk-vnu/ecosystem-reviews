@@ -12,7 +12,12 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             background-color: #f8f9fa;
+        }
+        svg {
+            display: block;
+            margin: auto;
         }
         .node {
             fill: white;
@@ -34,7 +39,7 @@
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
-            dominant-baseline: middle;
+            dominant-baseline: central;
         }
         .line {
             stroke: #333;
@@ -44,12 +49,13 @@
 </head>
 <body>
 
-<svg id="carbonGraph" width="800" height="600"></svg>
+<svg id="carbonGraph" width="100%" height="100vh"></svg>
 
 <script>
     const svg = d3.select("#carbonGraph");
-    const width = +svg.attr("width");
-    const height = +svg.attr("height");
+    const width = window.innerWidth * 0.7;
+    const height = window.innerHeight * 0.7;
+    svg.attr("viewBox", `0 0 ${width} ${height}`);
 
     // Center text coordinates
     const centerX = width / 2;
@@ -74,7 +80,7 @@
         { text: "...", x: centerX + 300, y: centerY }
     ];
 
-    // Draw lines, ensuring they don't touch the center text
+    // Draw lines ensuring they don't touch the center text
     data.forEach(d => {
         const dx = d.x - centerX;
         const dy = d.y - centerY;
