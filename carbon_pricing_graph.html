@@ -16,7 +16,6 @@
             background-color: #f8f9fa;
         }
         svg {
-            display: block;
             width: 90vw;
             height: 90vh;
         }
@@ -31,13 +30,13 @@
             transition: 0.3s;
         }
         .text {
-            font-size: 14px;
+            font-size: 12px;
             text-anchor: middle;
             font-weight: bold;
             pointer-events: none;
         }
         .center-text {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
@@ -51,13 +50,20 @@
 </head>
 <body>
 
-<svg id="carbonGraph" viewBox="-400 -300 800 600" preserveAspectRatio="xMidYMid meet"></svg>
+<svg id="carbonGraph"></svg>
 
 <script>
-    const width = 800, height = 600;
+    const width = window.innerWidth * 0.9;
+    const height = window.innerHeight * 0.9;
+
+    const svg = d3.select("#carbonGraph")
+        .attr("width", width)
+        .attr("height", height);
+
+    const centerNode = { id: "Ex-post Evidence on Carbon Pricing", fx: width / 2, fy: height / 2 };
 
     const nodes = [
-        { id: "Ex-post Evidence on Carbon Pricing", fx: 0, fy: 0, fixed: true },
+        centerNode,
         { id: "Effectiveness" },
         { id: "Labour market" },
         { id: "Innovation" },
@@ -68,14 +74,13 @@
         { id: "..." }
     ];
 
-    const links = nodes.slice(1).map(node => ({ source: "Ex-post Evidence on Carbon Pricing", target: node.id }));
-
-    const svg = d3.select("#carbonGraph");
+    const links = nodes.slice(1).map(node => ({ source: centerNode.id, target: node.id }));
 
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(120))
-        .force("charge", d3.forceManyBody().strength(-200))
-        .force("center", d3.forceCenter(0, 0));
+        .force("link", d3.forceLink(links).id(d => d.id).distance(150))
+        .force("charge", d3.forceManyBody().strength(-300))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
 
     const link = svg.selectAll(".link")
         .data(links)
@@ -86,7 +91,7 @@
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", 80)  // Adaptive size
+        .attr("rx", 70)
         .attr("ry", 40)
         .call(d3.drag()
             .on("start", dragStarted)
@@ -96,10 +101,10 @@
     const labels = svg.selectAll(".text")
         .data(nodes)
         .enter().append("text")
-        .attr("class", d => d.fixed ? "center-text" : "text")
+        .attr("class", d => d === centerNode ? "center-text" : "text")
         .text(d => d.id);
 
-    simulation.on("tick", () => {
+    function ticked() {
         link
             .attr("x1", d => d.source.x)
             .attr("y1", d => d.source.y)
@@ -113,10 +118,10 @@
         labels
             .attr("x", d => d.x)
             .attr("y", d => d.y + 5);
-    });
+    }
 
     function dragStarted(event, d) {
-        if (!d.fixed) simulation.alphaTarget(0.3).restart();
+        if (!d.fx) simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
@@ -127,7 +132,7 @@
     }
 
     function dragEnded(event, d) {
-        if (!d.fixed) {
+        if (d !== centerNode) {
             d.fx = null;
             d.fy = null;
         }
