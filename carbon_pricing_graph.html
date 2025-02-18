@@ -17,13 +17,13 @@
         }
         svg {
             display: block;
-            max-width: 90%;
-            max-height: 90vh;
+            width: 90%;
+            height: auto;
         }
         .node {
             fill: white;
             stroke: #a67c00;
-            stroke-width: 2;
+            stroke-width: 1.5;
             cursor: pointer;
         }
         .node:hover {
@@ -31,12 +31,12 @@
             transition: 0.3s;
         }
         .text {
-            font-size: 12px; /* Reduced from 14px */
+            font-size: 10px; /* Reduced from 12px */
             text-anchor: middle;
             font-weight: bold;
         }
         .center-text {
-            font-size: 18px; /* Reduced from 24px */
+            font-size: 16px; /* Reduced from 18px */
             font-weight: bold;
             fill: #333;
             text-anchor: middle;
@@ -44,48 +44,44 @@
         }
         .line {
             stroke: #333;
-            stroke-width: 1.5;
+            stroke-width: 1.2;
         }
     </style>
 </head>
 <body>
 
-<svg id="carbonGraph" width="800" height="600"></svg>
+<svg id="carbonGraph" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet"></svg>
 
 <script>
     const svg = d3.select("#carbonGraph");
-    const width = +svg.attr("width");
-    const height = +svg.attr("height");
+    const width = 800;
+    const height = 600;
 
-    // Center text coordinates
     const centerX = width / 2;
     const centerY = height / 2;
 
-    // Adding centered text
     svg.append("text")
         .attr("class", "center-text")
         .attr("x", centerX)
         .attr("y", centerY)
         .text("Ex-post Evidence on Carbon Pricing");
 
-    // Data for ellipses
     const data = [
-        { text: "Effectiveness", x: centerX - 200, y: centerY - 100 },
-        { text: "Labour market", x: centerX - 200, y: centerY + 100 },
-        { text: "Innovation", x: centerX, y: centerY + 200 },
-        { text: "Leakage", x: centerX + 200, y: centerY + 100 },
-        { text: "Public perception", x: centerX + 200, y: centerY - 100 },
-        { text: "Competitiveness", x: centerX + 50, y: centerY - 150 },
-        { text: "Distribution", x: centerX - 100, y: centerY - 200 },
-        { text: "...", x: centerX + 300, y: centerY }
+        { text: "Effectiveness", x: centerX - 160, y: centerY - 80 },
+        { text: "Labour market", x: centerX - 160, y: centerY + 80 },
+        { text: "Innovation", x: centerX, y: centerY + 160 },
+        { text: "Leakage", x: centerX + 160, y: centerY + 80 },
+        { text: "Public perception", x: centerX + 160, y: centerY - 80 },
+        { text: "Competitiveness", x: centerX + 40, y: centerY - 120 },
+        { text: "Distribution", x: centerX - 80, y: centerY - 140 },
+        { text: "...", x: centerX + 240, y: centerY }
     ];
 
-    // Draw lines ensuring they don't touch the center text
     data.forEach(d => {
         const dx = d.x - centerX;
         const dy = d.y - centerY;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const stopDistance = 50;
+        const stopDistance = 45; // Reduced further
 
         const newX = centerX + (dx / distance) * stopDistance;
         const newY = centerY + (dy / distance) * stopDistance;
@@ -98,7 +94,6 @@
             .attr("y2", d.y);
     });
 
-    // Draw ellipses
     svg.selectAll(".node")
         .data(data)
         .enter()
@@ -106,10 +101,9 @@
         .attr("class", "node")
         .attr("cx", d => d.x)
         .attr("cy", d => d.y)
-        .attr("rx", 60)  // Reduced from 70
-        .attr("ry", 30); // Reduced from 40
+        .attr("rx", 40)  // Reduced from 50
+        .attr("ry", 25); // Reduced from 30
 
-    // Add text inside ellipses
     svg.selectAll(".text")
         .data(data)
         .enter()
