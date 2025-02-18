@@ -77,10 +77,10 @@
     // Define links
     const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
 
-    // Create force simulation with stronger repulsion to avoid overlap
+    // Create force simulation with better spacing
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(220)) // Increased distance
-        .force("charge", d3.forceManyBody().strength(-800)) // Stronger repulsion
+        .force("link", d3.forceLink(links).id(d => d.id).distance(250)) // Increased distance
+        .force("charge", d3.forceManyBody().strength(-1000)) // Stronger repulsion
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("collision", d3.forceCollide().radius(100)) // Prevent overlap
         .on("tick", ticked);
@@ -96,7 +96,7 @@
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", d => d.fixed ? 120 : 90) // Wider center node
+        .attr("rx", d => d.fixed ? 130 : 90) // Wider center node
         .attr("ry", d => d.fixed ? 60 : 45)  // Taller center node
         .call(d3.drag()
             .on("start", dragStarted)
@@ -109,18 +109,18 @@
         .enter().append("g")
         .attr("class", "text-group");
 
-    labels.append("text")
-        .attr("class", d => d.fixed ? "center-text" : "text")
-        .attr("dy", d => d.fixed ? "-10px" : "5px") // Adjust for center multi-line
-        .each(function(d) {
-            const words = d.id.split("\n");
-            d3.select(this).selectAll("tspan")
-                .data(words)
-                .enter().append("tspan")
-                .attr("x", d => d.x)
-                .attr("dy", (_, i) => i === 0 ? 0 : "1.2em")
-                .text(d => d);
+    labels.each(function(d) {
+        const textGroup = d3.select(this);
+        const words = d.id.split("\n");
+
+        words.forEach((word, i) => {
+            textGroup.append("text")
+                .attr("class", d.fixed ? "center-text" : "text")
+                .attr("x", 0)
+                .attr("y", i * 18 - (words.length - 1) * 9) // Center multi-line text
+                .text(word);
         });
+    });
 
     function ticked() {
         link
@@ -134,7 +134,7 @@
             .attr("cy", d => d.y);
 
         labels
-            .attr("transform", d => `translate(${d.x},${d.y + 5})`);
+            .attr("transform", d => `translate(${d.x},${d.y})`);
     }
 
     function dragStarted(event, d) {
