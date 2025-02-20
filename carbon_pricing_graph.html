@@ -15,9 +15,17 @@
             margin: 0;
             background-color: #f8f9fa;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
         svg {
-            width: 80vw;  /* Reduced from 90vw */
-            height: 80vh; /* Reduced from 90vh */
+            display: block;
+            width: 75vw;  /* Adjusted */
+            height: 75vh; /* Adjusted */
         }
         .node {
             stroke: #0077b6;
@@ -26,7 +34,7 @@
             transition: fill 0.3s ease;
         }
         .text {
-            font-size: 12px; /* Slightly smaller text */
+            font-size: 12px;
             text-anchor: middle;
             font-weight: bold;
             pointer-events: none;
@@ -47,61 +55,58 @@
 </head>
 <body>
 
-<svg id="carbonGraph"></svg>
+<div class="container">
+    <svg id="carbonGraph"></svg>
+</div>
 
 <script>
-    const width = window.innerWidth * 0.8;
-    const height = window.innerHeight * 0.8;
+    const width = window.innerWidth * 0.75;  // Adjusted size
+    const height = window.innerHeight * 0.75; // Adjusted size
 
     const svg = d3.select("#carbonGraph")
         .attr("width", width)
         .attr("height", height);
 
-    // Define nodes with colors
     const nodes = [
         { id: "Ex-post Evidence\non Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true, color: "white" },
         { id: "Effectiveness", color: "green" },
-        { id: "Labour market", color: "yellow" },
+        { id: "Labour market", color: "white" },
         { id: "Innovation", color: "yellow" },
         { id: "Leakage", color: "yellow" },
         { id: "Public perception", color: "white" },
         { id: "Competitiveness", color: "white" },
         { id: "Distribution", color: "white" },
         { id: "...", color: "white" },
-        { id: "Carbon Intensity", color: "yellow" }
+        { id: "Carbon Intensity", color: "yellow" },
+        { id: "Employment", color: "yellow" }
     ];
 
-    // Define links
     const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
 
-    // Create force simulation with smaller distances
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(180)) // Reduced from 250
-        .force("charge", d3.forceManyBody().strength(-800)) // Slightly reduced repulsion
-        .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(80)) // Reduced from 100
+        .force("link", d3.forceLink(links).id(d => d.id).distance(180)) 
+        .force("charge", d3.forceManyBody().strength(-800)) 
+        .force("center", d3.forceCenter(width / 2, height / 2)) // Ensures it remains centered
+        .force("collision", d3.forceCollide().radius(75))
         .on("tick", ticked);
 
-    // Create links
     const link = svg.selectAll(".link")
         .data(links)
         .enter().append("line")
         .attr("class", "link");
 
-    // Create nodes with specified colors and smaller sizes
     const node = svg.selectAll(".node")
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", d => d.fixed ? 100 : 60) // Reduced from 130 / 90
-        .attr("ry", d => d.fixed ? 45 : 30)  // Reduced from 60 / 45
+        .attr("rx", d => d.fixed ? 110 : 75) 
+        .attr("ry", d => d.fixed ? 50 : 35)
         .style("fill", d => d.color)
         .call(d3.drag()
             .on("start", dragStarted)
             .on("drag", dragged)
             .on("end", dragEnded));
 
-    // Add text labels
     const labels = svg.selectAll(".text-group")
         .data(nodes)
         .enter().append("g")
@@ -115,7 +120,7 @@
             textGroup.append("text")
                 .attr("class", d.fixed ? "center-text" : "text")
                 .attr("x", 0)
-                .attr("y", i * 16 - (words.length - 1) * 8) // Adjusted for new sizes
+                .attr("y", i * 16 - (words.length - 1) * 8)
                 .text(word);
         });
     });
