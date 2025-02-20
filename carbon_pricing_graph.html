@@ -24,8 +24,9 @@
         }
         svg {
             display: block;
-            width: 70vw;  /* Adjusted */
-            height: 70vh; /* Adjusted */
+            width: 80vw;  /* Slightly larger to prevent cutting */
+            height: 80vh; /* Slightly larger to prevent cutting */
+            overflow: visible; /* Ensure all nodes render */
         }
         .node {
             stroke: #0077b6;
@@ -60,8 +61,8 @@
 </div>
 
 <script>
-    const width = window.innerWidth * 0.75;  // Adjusted size
-    const height = window.innerHeight * 0.75; // Adjusted size
+    const width = window.innerWidth * 0.80;  
+    const height = window.innerHeight * 0.80; 
 
     const svg = d3.select("#carbonGraph")
         .attr("width", width)
@@ -70,24 +71,25 @@
     const nodes = [
         { id: "Ex-post Evidence\non Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true, color: "white" },
         { id: "Effectiveness", color: "green" },
-        { id: "Labour market", color: "white" },
+        { id: "Labour market", color: "yellow" },
         { id: "Innovation", color: "yellow" },
         { id: "Leakage", color: "yellow" },
         { id: "Public perception", color: "white" },
         { id: "Competitiveness", color: "white" },
         { id: "Distribution", color: "white" },
         { id: "...", color: "white" },
-        { id: "Carbon Intensity", color: "yellow" },
-        { id: "Employment", color: "yellow" }
+        { id: "Carbon Intensity", color: "yellow" }
     ];
 
     const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
 
     const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id).distance(180)) 
-        .force("charge", d3.forceManyBody().strength(-800)) 
+        .force("charge", d3.forceManyBody().strength(-1000)) 
         .force("center", d3.forceCenter(width / 2, height / 2)) // Ensures it remains centered
-        .force("collision", d3.forceCollide().radius(75))
+        .force("collision", d3.forceCollide().radius(90)) // Increased radius for better spacing
+        .force("x", d3.forceX(width / 2).strength(0.05)) // Keep nodes within the boundaries
+        .force("y", d3.forceY(height / 2).strength(0.05)) // Keep nodes within the boundaries
         .on("tick", ticked);
 
     const link = svg.selectAll(".link")
