@@ -50,8 +50,8 @@
 <svg id="carbonGraph"></svg>
 
 <script>
-    const width = window.innerWidth * 0.7;
-    const height = window.innerHeight * 0.7;
+    const width = window.innerWidth * 0.8;
+    const height = window.innerHeight * 0.8;
 
     const svg = d3.select("#carbonGraph")
         .attr("width", width)
@@ -76,7 +76,7 @@
 
     // Create force simulation with smaller distances
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(200)) // Reduced from 250
+        .force("link", d3.forceLink(links).id(d => d.id).distance(180)) // Reduced from 250
         .force("charge", d3.forceManyBody().strength(-800)) // Slightly reduced repulsion
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("collision", d3.forceCollide().radius(80)) // Reduced from 100
@@ -93,8 +93,8 @@
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", d => d.fixed ? 110 : 75) // Reduced from 130 / 90
-        .attr("ry", d => d.fixed ? 50 : 35)  // Reduced from 60 / 45
+        .attr("rx", d => d.fixed ? 100 : 70) // Reduced from 130 / 90
+        .attr("ry", d => d.fixed ? 45 : 30)  // Reduced from 60 / 45
         .style("fill", d => d.color)
         .call(d3.drag()
             .on("start", dragStarted)
