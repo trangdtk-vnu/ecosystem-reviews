@@ -93,7 +93,7 @@
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", d => d.fixed ? 100 : 70) // Reduced from 130 / 90
+        .attr("rx", d => d.fixed ? 100 : 60) // Reduced from 130 / 90
         .attr("ry", d => d.fixed ? 45 : 30)  // Reduced from 60 / 45
         .style("fill", d => d.color)
         .call(d3.drag()
