@@ -28,15 +28,15 @@ title: Home
         <strong>Legend:</strong>
         <div style="display: flex; align-items: center; margin-top: 5px;">
             <div style="width: 15px; height: 15px; background-color: green; border-radius: 50%; margin-right: 8px;"></div>
-            <span>Finished - <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a></span>
+            <span>Finished: Effectiveness - <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a></span>
         </div>
         <div style="display: flex; align-items: center; margin-top: 5px;">
             <div style="width: 15px; height: 15px; background-color: yellow; border-radius: 50%; margin-right: 8px;"></div>
-            <span>In Progress </span>
+            <span>In Progress: Innovation, Carbon Intensity, Leakage, Labour Market  </span>
         </div>
         <div style="display: flex; align-items: center; margin-top: 5px;">
             <div style="width: 15px; height: 15px; background-color: white; border: 1px solid black; border-radius: 50%; margin-right: 8px;"></div>
-            <span>Needs Review - Not Yet Started</span>
+            <span>Needs Review - Not Yet Started: Distribution, Public Perception, Competitiveness </span>
         </div>
     </div>
 </div>
