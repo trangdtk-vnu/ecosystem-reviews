@@ -20,14 +20,10 @@
             height: 90vh;
         }
         .node {
-            fill: white;
             stroke: #0077b6;
             stroke-width: 2;
             cursor: grab;
             transition: fill 0.3s ease;
-        }
-        .node:hover {
-            fill: #00b4d8;
         }
         .text {
             font-size: 14px;
@@ -61,49 +57,51 @@
         .attr("width", width)
         .attr("height", height);
 
-    // Define nodes
+    // Define nodes with colors
     const nodes = [
-        { id: "Ex-post Evidence\non Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true },
-        { id: "Effectiveness" },
-        { id: "Labour market" },
-        { id: "Innovation" },
-        { id: "Leakage" },
-        { id: "Public perception" },
-        { id: "Competitiveness" },
-        { id: "Distribution" },
-        { id: "..." }
+        { id: "Ex-post Evidence\non Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true, color: "white" },
+        { id: "Effectiveness", color: "green" },
+        { id: "Labour market", color: "white" },
+        { id: "Innovation", color: "yellow" },
+        { id: "Leakage", color: "yellow" },
+        { id: "Public perception", color: "white" },
+        { id: "Competitiveness", color: "white" },
+        { id: "Distribution", color: "white" },
+        { id: "...", color: "white" },
+        { id: "Carbon Intensity", color: "yellow" }
     ];
 
     // Define links
     const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
 
-    // Create force simulation with better spacing
+    // Create force simulation
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(250)) // Increased distance
-        .force("charge", d3.forceManyBody().strength(-1000)) // Stronger repulsion
+        .force("link", d3.forceLink(links).id(d => d.id).distance(250))
+        .force("charge", d3.forceManyBody().strength(-1000))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(100)) // Prevent overlap
+        .force("collision", d3.forceCollide().radius(100))
         .on("tick", ticked);
 
-    // Create link elements
+    // Create links
     const link = svg.selectAll(".link")
         .data(links)
         .enter().append("line")
         .attr("class", "link");
 
-    // Create node elements
+    // Create nodes with specified colors
     const node = svg.selectAll(".node")
         .data(nodes)
         .enter().append("ellipse")
         .attr("class", "node")
-        .attr("rx", d => d.fixed ? 130 : 90) // Wider center node
-        .attr("ry", d => d.fixed ? 60 : 45)  // Taller center node
+        .attr("rx", d => d.fixed ? 130 : 90)
+        .attr("ry", d => d.fixed ? 60 : 45)
+        .style("fill", d => d.color)
         .call(d3.drag()
             .on("start", dragStarted)
             .on("drag", dragged)
             .on("end", dragEnded));
 
-    // Add text labels (handles multi-line for center)
+    // Add text labels
     const labels = svg.selectAll(".text-group")
         .data(nodes)
         .enter().append("g")
@@ -117,7 +115,7 @@
             textGroup.append("text")
                 .attr("class", d.fixed ? "center-text" : "text")
                 .attr("x", 0)
-                .attr("y", i * 18 - (words.length - 1) * 9) // Center multi-line text
+                .attr("y", i * 18 - (words.length - 1) * 9)
                 .text(word);
         });
     });
