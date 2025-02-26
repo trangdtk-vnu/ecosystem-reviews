@@ -31,13 +31,13 @@ title: Home
     </div>
     <div style="display: flex; align-items: center; margin-top: 5px;">
         <div style="width: 15px; height: 15px; background-color: yellow; border-radius: 50%; margin-right: 8px;"></div>
-        <span>
-            <strong>In Progress:</strong> 
-            Innovation - <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">trang.dong@uhasselt.be</a>)</em>,  
-            Carbon Intensity - <em>Contact: XXXX (<a href="mailto:XXXX@example.com">XXXX@example.com</a>)</em>,  
-            Leakage - <em>Contact: YYYY (<a href="mailto:YYYY@example.com">YYYY@example.com</a>)</em>,  
-            Labour Market - <em>Contact: ZZZZ (<a href="mailto:ZZZZ@example.com">ZZZZ@example.com</a>)</em>
-        </span>
+        <span><strong>In Progress:</strong></span>
+    </div>
+    <div style="margin-left: 25px; margin-top: 5px;">
+        <div>Innovation - <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">trang.dong@uhasselt.be</a>)</em></div>
+        <div>Carbon Intensity - <em>Contact: XXXX (<a href="mailto:XXXX@example.com">XXXX@example.com</a>)</em></div>
+        <div>Leakage - <em>Contact: YYYY (<a href="mailto:YYYY@example.com">YYYY@example.com</a>)</em></div>
+        <div>Labour Market - <em>Contact: ZZZZ (<a href="mailto:ZZZZ@example.com">ZZZZ@example.com</a>)</em></div>
     </div>
     <div style="display: flex; align-items: center; margin-top: 5px;">
         <div style="width: 15px; height: 15px; background-color: white; border: 1px solid black; border-radius: 50%; margin-right: 8px;"></div>
