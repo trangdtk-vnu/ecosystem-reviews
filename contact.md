@@ -4,69 +4,58 @@ title: Contact
 permalink: /contact/
 ---
 
-# Contact
+# 📬 Contact Us
 
-<style>
-  form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-    display: block;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  textarea {
-    resize: vertical;
-    height: 150px;
-  }
-  button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background-color: #45a049;
-  }
-</style>
+<div class="contact-container">
+  <div class="contact-form">
+    <h2>Send a Message</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Your name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="your.email@example.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea name="message" placeholder="How can we help?" required></textarea>
+      </div>
+      
+      <button type="submit" class="submit-btn">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-icon">→</span>
+      </button>
+    </form>
+  </div>
 
-<form action="https://formspree.io/f/yourformid" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" name="email" required>
-
-  <label for="message">Message:</label>
-  <textarea name="message" required></textarea>
-
-  <button type="submit">Send</button>
-</form>
-
----
-
-Feel free to reach out!
-
-📧 **Email:** [email@example.com](mailto:stephan.bruns@uhasselt.be)  
-🏢 **Institution:** Hasselt University  
-🌍 **Location:** Hasselt, Belgium
+  <div class="contact-info">
+    <h2>Direct Contacts</h2>
+    <div class="contact-card">
+      <div class="contact-icon">📧</div>
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a></p>
+      </div>
+    </div>
+    
+    <div class="contact-card">
+      <div class="contact-icon">🏢</div>
+      <div>
+        <h3>Institution</h3>
+        <p>Hasselt University</p>
+      </div>
+    </div>
+    
+    <div class="contact-card">
+      <div class="contact-icon">🌍</div>
+      <div>
+        <h3>Location</h3>
+        <p>Hasselt, Belgium</p>
+      </div>
+    </div>
+  </div>
+</div>
