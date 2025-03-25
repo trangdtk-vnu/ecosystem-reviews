@@ -17,17 +17,14 @@ title: Home
   </ul>
 </div>
 
-<div class="content-grid">
-  <!-- Interactive Graph Section -->
-  <div class="graph-card">
-    <h2><i class="fas fa-chart-network"></i> Research Status Map</h2>
-    <div class="graph-container">
-      <iframe src="/ecosystem-reviews/carbon_pricing_graph.html" width="800" height="700" style="border:none;"></iframe>
-    </div>
+<!-- Map Section -->
+<div class="map-section">
+  <div class="graph-container">
+    <iframe src="/ecosystem-reviews/carbon_pricing_graph.html" width="800" height="700" style="border:none;"></iframe>
   </div>
 
-  <!-- Legend Section -->
-  <div class="legend-card">
+  <!-- Legend positioned below map -->
+  <div class="legend-box">
     <h3><i class="fas fa-key"></i> Legend</h3>
     <div class="legend-items">
       <div class="legend-item">
@@ -44,7 +41,7 @@ title: Home
       <div class="legend-item">
         <div class="color-dot in-progress"></div>
         <div class="legend-text">
-          <strong>In Progress</strong>
+          <strong>In Progress:</strong>
           <div class="sub-items">
             <div>Innovation <span class="contact-badge"><i class="fas fa-envelope"></i> Trang Dong</span></div>
             <div>Carbon Intensity <span class="contact-badge"><i class="fas fa-envelope"></i> XXXX</span></div>
@@ -64,6 +61,7 @@ title: Home
   </div>
 </div>
 
+<!-- External Reviews Section -->
 <div class="reviews-section">
   <h2><i class="fas fa-table"></i> External Systematic Reviews</h2>
   <div class="table-container">
