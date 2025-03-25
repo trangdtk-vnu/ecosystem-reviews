@@ -7,6 +7,10 @@ title: Home
   <h1>🌍 Ecosystem of Reviews for Carbon Pricing</h1>
 </div>
 
+Explore the Ecosystem of Reviews for Carbon Pricing, a centralized hub tracking research progress across key climate policy topics.
+This project is designed for researchers and policymakers to prevent duplication, identify gaps, and accelerate evidence synthesis for effective carbon pricing policies.
+
+
 <div class="content-wrapper">
   <!-- Interactive Graph Section -->
   <div class="graph-container">
