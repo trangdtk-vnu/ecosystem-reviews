@@ -337,3 +337,42 @@ input:focus, textarea:focus {
     flex-direction: column;
   }
 }
+
+/* Compact Contact List */
+.compact-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.compact-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.compact-contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slightly reduce form width */
+.contact-form {
+  flex: 1.2;
+  min-width: 300px;
+}
+
+.contact-info {
+  flex: 0.8;
+  min-width: 250px;
+}
