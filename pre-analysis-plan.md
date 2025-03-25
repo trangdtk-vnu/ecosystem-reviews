@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pre-Analysis Plan
-nav_order: 5
+nav_order: 4
 ---
 
 # Pre-Analysis Plan  
