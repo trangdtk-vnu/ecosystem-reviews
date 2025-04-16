@@ -23,17 +23,34 @@ This project is designed for researchers and policymakers to prevent duplication
   <!-- Legend -->
   <div class="legend-box">
     <h3>Legend</h3>
+
     <div class="legend-item">
-      <span class="color-dot finished"></span>
-      <strong>Finished:</strong> Effectiveness –  
-      <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a><br>
-      <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="mailto:niklas.doebbeling-hildebrandt@pik-potsdam.de">Email</a>)</em>
+      <div class="color-dot finished"></div>
+      <div class="legend-text">
+        <strong>Finished:</strong> Effectiveness –  
+        <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a><br>
+        <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="mailto:niklas.doebbeling-hildebrandt@pik-potsdam.de">Email</a>)</em>
+      </div>
     </div>
+
     <div class="legend-item">
-      <span class="color-dot in-progress"></span> In Progress
+      <div class="color-dot in-progress"></div>
+      <div class="legend-text">
+        <strong>In Progress:</strong>
+      </div>
     </div>
+    <div class="sub-items">
+      <div>Innovation – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
+      <div>Carbon Intensity – <em>Contact: XXXX (<a href="mailto:XXXX@example.com">Email</a>)</em></div>
+      <div>Leakage – <em>Contact: YYYY (<a href="mailto:YYYY@example.com">Email</a>)</em></div>
+      <div>Labour Market – <em>Contact: ZZZZ (<a href="mailto:ZZZZ@example.com">Email</a>)</em></div>
+    </div>
+
     <div class="legend-item">
-      <span class="color-dot needs-review"></span> Needs Review
+      <div class="color-dot needs-review"></div>
+      <div class="legend-text">
+        <strong>Needs Review:</strong> Distribution, Public Perception, Competitiveness
+      </div>
     </div>
   </div>
 
