@@ -12,45 +12,32 @@ Explore the Ecosystem of Reviews for Carbon Pricing, a centralised hub tracking 
 This project is designed for researchers and policymakers to prevent duplication, identify gaps, and accelerate evidence synthesis for effective carbon pricing policies.
 </p>
 
+<!-- Graph -->
 <div class="graph-container">
   <iframe src="/ecosystem-reviews/carbon_pricing_graph.html" width="100%" height="700"></iframe>
 </div>
 
-<div class="content-wrapper">
-  <!-- Legend Section -->
+<!-- Shared Width Wrapper -->
+<div class="stacked-container">
+  
+  <!-- Legend -->
   <div class="legend-box">
     <h3>Legend</h3>
     <div class="legend-item">
-      <div class="color-dot finished"></div>
-      <div class="legend-text">
-        <strong>Finished:</strong> Effectiveness -  
-        <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a><br>
-        <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="mailto:niklas.doebbeling-hildebrandt@pik-potsdam.de">Email</a>)</em>
-      </div>
+      <span class="color-dot finished"></span>
+      <strong>Finished:</strong> Effectiveness –  
+      <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a><br>
+      <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="mailto:niklas.doebbeling-hildebrandt@pik-potsdam.de">Email</a>)</em>
     </div>
-
     <div class="legend-item">
-      <div class="color-dot in-progress"></div>
-      <div class="legend-text">
-        <strong>In Progress:</strong>
-      </div>
+      <span class="color-dot in-progress"></span> In Progress
     </div>
-    <div class="sub-items">
-      <div>Innovation - <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
-      <div>Carbon Intensity - <em>Contact: XXXX (<a href="mailto:XXXX@example.com">Email</a>)</em></div>
-      <div>Leakage - <em>Contact: YYYY (<a href="mailto:YYYY@example.com">Email</a>)</em></div>
-      <div>Labour Market - <em>Contact: ZZZZ (<a href="mailto:ZZZZ@example.com">Email</a>)</em></div>
-    </div>
-
     <div class="legend-item">
-      <div class="color-dot needs-review"></div>
-      <div class="legend-text">
-        <strong>Needs Review:</strong> Distribution, Public Perception, Competitiveness
-      </div>
+      <span class="color-dot needs-review"></span> Needs Review
     </div>
   </div>
 
-  <!-- External Reviews Table -->
+  <!-- Table -->
   <div class="table-container">
     <h2>External Systematic Reviews</h2>
     {% include reviews-table.html %}
