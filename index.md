@@ -60,7 +60,7 @@ This project is designed for researchers and policymakers to prevent duplication
     {% include reviews-table.html %}
     <p class="contribute-note">
       <strong>How to contribute?</strong>  
-      Email <a href="mailto:xxx@gmail.com">xxx@gmail.com</a> to suggest additions.
+      Email <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a> to suggest additions.
     </p>
   </div>
 </div>
