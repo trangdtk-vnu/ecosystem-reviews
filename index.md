@@ -8,8 +8,7 @@ title: Home
 </div>
 
 <p>
-Explore the Ecosystem of Reviews for Carbon Pricing, a centralised hub tracking research progress across key climate policy topics.
-This project is designed for researchers and policymakers to prevent duplication, identify gaps, and accelerate evidence synthesis for effective carbon pricing policies.
+Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions. Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
 </p>
 
 <!-- Graph -->
