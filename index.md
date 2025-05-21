@@ -57,8 +57,8 @@ Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews i
     <h2>External Systematic Reviews</h2>
     {% include reviews-table.html %}
     <p class="contribute-note">
-      <strong>Other systematic reviews or meta-analysis that should be added? Please let us know: Stephan Bruns </strong>  
-      - Email <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a>.
+      <strong>Other systematic reviews or meta-analysis that should be added?
+        Please let us know: Stephan Bruns </strong> - Email: <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a>.
     </p>
   </div>
 </div>
