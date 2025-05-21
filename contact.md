@@ -32,7 +32,7 @@ permalink: /contact/
     <ul class="compact-contact-list">
       <li>
         <span class="contact-icon">📧</span>
-        <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a>
+        <em> Stephan Bruns (<a href="mailto:stephan.bruns@uhasselt.be">Email</a>)</em>
       </li>
       <li>
         <span class="contact-icon">🏢</span>
