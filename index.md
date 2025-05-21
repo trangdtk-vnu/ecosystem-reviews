@@ -40,15 +40,14 @@ Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews i
     </div>
     <div class="sub-items">
       <div>Innovation – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
-      <div>Carbon Intensity – <em>Contact: XXXX (<a href="mailto:XXXX@example.com">Email</a>)</em></div>
-      <div>Leakage – <em>Contact: YYYY (<a href="mailto:YYYY@example.com">Email</a>)</em></div>
-      <div>Labour Market – <em>Contact: ZZZZ (<a href="mailto:ZZZZ@example.com">Email</a>)</em></div>
+      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="mailto:MiLim.Kim@anu.edu.au">Email</a>)</em></div>
+      <div>Labour Market – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
     </div>
 
     <div class="legend-item">
       <div class="color-dot needs-review"></div>
       <div class="legend-text">
-        <strong>Needs Review:</strong> Distribution, Public Perception, Competitiveness
+        <strong>Needs Review:</strong> Leakage, Distribution, Public Perception, Competitiveness
       </div>
     </div>
   </div>
@@ -58,8 +57,8 @@ Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews i
     <h2>External Systematic Reviews</h2>
     {% include reviews-table.html %}
     <p class="contribute-note">
-      <strong>How to contribute?</strong>  
-      Email <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a> to suggest additions.
+      <strong>Other systematic reviews or meta-analysis that should be added? Please let us know: Stephan Bruns </strong>  
+      - Email <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a>.
     </p>
   </div>
 </div>
