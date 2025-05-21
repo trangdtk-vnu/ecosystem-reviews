@@ -63,8 +63,8 @@ title: Home
     <p>
       <strong>
         Other systematic reviews or meta-analyses that should be added?<br>
-        Please let us know: Stephan Bruns
-      </strong> – Contact:
+        Please let us know:
+      </strong>
       <em>
         Stephan Bruns (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)
       </em>
