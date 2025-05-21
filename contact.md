@@ -6,7 +6,7 @@ permalink: /contact/
 
 # 📬 Contact Us
 
-<div class="contact-container">
+/* <div class="contact-container">
   <div class="contact-form">
     <h2>Send a Message</h2>
     <form action="https://formspree.io/f/yourformid" method="POST">
@@ -24,7 +24,7 @@ permalink: /contact/
       
       <button type="submit">Send Message →</button>
     </form>
-  </div>
+  </div> */
 
   <div class="contact-info">
     <h2>Direct Contacts</h2>
