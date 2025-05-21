@@ -27,22 +27,22 @@ permalink: /contact/
   </div>
   -->
 
-  <div class="contact-info">
-    <h2>Direct Contacts</h2>
-    <ul class="compact-contact-list">
-      <li>
-        <span class="contact-icon">📧</span>
-        <em> Stephan Bruns (<a href="mailto:stephan.bruns@uhasselt.be">Email</a>)</em>
-      </li>
-      <li>
-        <span class="contact-icon">🏢</span>
-        Hasselt University
-      </li>
-      <li>
-        <span class="contact-icon">🌍</span>
-        Hasselt, Belgium
-      </li>
-    </ul>
-  </div>
+<div class="contact-info">
+  <h2>Direct Contacts</h2>
+  <ul class="compact-contact-list">
+    <li>
+      <span class="contact-icon">📧</span>
+      <em> Stephan Bruns (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)</em>
+    </li>
+    <li>
+      <span class="contact-icon">🏢</span>
+      Hasselt University
+    </li>
+    <li>
+      <span class="contact-icon">🌍</span>
+      Hasselt, Belgium
+    </li>
+  </ul>
+</div>
 <!--</div>
 -->
