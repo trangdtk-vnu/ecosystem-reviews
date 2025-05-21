@@ -143,8 +143,8 @@ main {
     flex-shrink: 0;
 }
 
-.finished { background-color: #27ae60; }
-.in-progress { background-color: #f39c12; }
+.finished { background-color: green; }
+.in-progress { background-color: yellow; }
 .needs-review { 
     background-color: white;
     border: 2px solid #95a5a6;
