@@ -41,7 +41,7 @@ Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews i
     <div class="sub-items">
       <div>Innovation – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
       <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="mailto:MiLim.Kim@anu.edu.au">Email</a>)</em></div>
-      <div>Market Efficiency - <em>Contact: Banna Banik (<a href="mailto:Banna.Banik@anu.edu.au">Email</a>)<em></div>
+      <div>Market Efficiency – <em>Contact: Banna Banik (<a href="mailto:Banna.Banik@anu.edu.au">Email</a>)</em></div>
       <div>Labour Market – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
     </div>
 
