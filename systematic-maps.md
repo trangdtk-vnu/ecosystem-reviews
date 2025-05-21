@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Systematic Maps
+title: Systematic Map
 nav_order: 3
 ---
 
-# Systematic Maps
+# Systematic Map
 
 <iframe 
   src="https://climateliterature.org/#/project/carbonpricing" 
