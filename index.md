@@ -64,5 +64,4 @@ Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews i
 </strong> – Contact:
 <em> Stephan Bruns (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></p>
     </p>
-  </div>
 </div>
