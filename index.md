@@ -8,41 +8,40 @@ title: Home
 </div>
 
 <p>
-Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions. Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
+  Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions. Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
 </p>
 
-<!-- Graph -->
+<!-- Embedded Graph -->
 <div class="graph-container">
-  <iframe src="/ecosystem-reviews/carbon_pricing_graph.html" width="100%" height="700"></iframe>
+  <iframe src="/ecosystem-reviews/carbon_pricing_graph.html" width="100%" height="700" title="Carbon Pricing Graph" style="border: none;"></iframe>
 </div>
 
-<!-- Shared Width Wrapper -->
+<!-- Main Content Wrapper -->
 <div class="stacked-container">
-  
-  <!-- Legend -->
+
+  <!-- Legend Section -->
   <div class="legend-box">
-    <h3>Legend</h3>
+    <h2>Legend</h2>
 
     <div class="legend-item">
       <div class="color-dot finished"></div>
       <div class="legend-text">
         <strong>Finished:</strong> Effectiveness –  
-        <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank">Published Paper</a><br>
-        <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="mailto:niklas.doebbeling-hildebrandt@pik-potsdam.de">Email</a>)</em>
+        <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank" rel="noopener noreferrer">Published Paper</a><br>
+        <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="#" onclick="window.location.href='mailto:' + 'niklas.doebbeling-hildebrandt' + '@' + 'pik-potsdam.de'; return false;">Email</a>)</em>
       </div>
     </div>
 
     <div class="legend-item">
       <div class="color-dot in-progress"></div>
-      <div class="legend-text">
-        <strong>In Progress:</strong>
-      </div>
+      <div class="legend-text"><strong>In Progress:</strong></div>
     </div>
+
     <div class="sub-items">
-      <div>Innovation – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
-      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="mailto:MiLim.Kim@anu.edu.au">Email</a>)</em></div>
-      <div>Market Efficiency – <em>Contact: Banna Banik (<a href="mailto:Banna.Banik@anu.edu.au">Email</a>)</em></div>
-      <div>Labour Market – <em>Contact: Trang Dong (<a href="mailto:trang.dong@uhasselt.be">Email</a>)</em></div>
+      <div>Innovation – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
+      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="#" onclick="window.location.href='mailto:' + 'MiLim.Kim' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
+      <div>Market Efficiency – <em>Contact: Banna Banik (<a href="#" onclick="window.location.href='mailto:' + 'Banna.Banik' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
+      <div>Labour Market – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
     </div>
 
     <div class="legend-item">
@@ -53,17 +52,23 @@ Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews i
     </div>
   </div>
 
-  <!-- Table -->
+  <!-- Table Section -->
   <div class="table-container">
     <h2>External Systematic Reviews</h2>
     {% include reviews-table.html %}
-    <p class="contribute-note">
+  </div>
 
- <strong>
-    Other systematic reviews or meta-analyses that should be added?<br>
-    Please let us know: Stephan Bruns
-  </strong> – Contact: 
-  <em> Stephan Bruns (<a href="mailto:stephan.bruns@uhasselt.be">Email</a>)</em></div>
+  <!-- Contribution Call -->
+  <div class="contribute-note" style="text-align: center; margin-top: 2rem;">
+    <p>
+      <strong>
+        Other systematic reviews or meta-analyses that should be added?<br>
+        Please let us know: Stephan Bruns
+      </strong> – Contact:
+      <em>
+        Stephan Bruns (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)
+      </em>
     </p>
   </div>
+
 </div>
