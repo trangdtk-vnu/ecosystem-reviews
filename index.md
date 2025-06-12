@@ -8,7 +8,9 @@ title: Home
 </div>
 
 <p>
-  Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions. Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
+Explore the Ecosystem of Reviews for Carbon Pricing. This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions. The focus is on meta-analyses of empirical evaluations of the ex-post literature with a global perspective and the ambition to become living evidence. Turning systematic reviews and meta-analyses into living evidence is particularly indicated as carbon prices will change over time.
+
+Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
 </p>
 
 <!-- Embedded Graph -->
