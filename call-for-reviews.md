@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Call for Reviews
+title: Call for Collaboration
 nav_order: 2
 ---
 
-# Call for Reviews 
+# Call for Collaboration 
 
 <p>
   Contribute to advancing carbon pricing research! Reach out to us if you're interested in collaborating or contributing a systematic review:
