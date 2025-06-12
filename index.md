@@ -28,7 +28,7 @@ Unlike traditional reviews that often exist in disciplinary or temporal isolatio
     <div class="legend-item">
       <div class="color-dot finished"></div>
       <div class="legend-text">
-        <strong>Finished:</strong> Effectiveness –  
+        <strong>Published and living evidence in progress:</strong> Effectiveness –  
         <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank" rel="noopener noreferrer">Published Paper</a><br>
         <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="#" onclick="window.location.href='mailto:' + 'niklas.doebbeling-hildebrandt' + '@' + 'pik-potsdam.de'; return false;">Email</a>)</em>
       </div>
