@@ -12,7 +12,7 @@ title: Home
 
 <div style="max-width: 900px; margin: 2rem auto; line-height: 1.6; font-size: 1.05rem;">
   <p>
-    <strong>Explore the Ecosystem of Reviews for Carbon Pricing</strong> — an integrated and evolving framework that combines systematic reviews, meta-analyses, and evidence maps. Together, these elements provide comprehensive, policy-relevant insights into the effects of carbon pricing.
+    <strong>Explore the Ecosystem of Reviews for Carbon Pricing</strong> - an integrated and evolving framework that combines systematic reviews, meta-analyses, and evidence maps. Together, these elements provide comprehensive, policy-relevant insights into the effects of carbon pricing.
   </p>
 
   <p>
@@ -20,7 +20,7 @@ title: Home
   </p>
 
   <p>
-    Unlike traditional reviews that operate in isolation, this approach treats each review as a node in a <strong>living, adaptive knowledge network</strong>. Reviews are interlinked — they contribute to and draw from one another — enhancing coherence, reducing duplication, and enabling <strong>methodological harmonization</strong> across studies.
+    Unlike traditional reviews that operate in isolation, this approach treats each review as a node in a <strong>living, adaptive knowledge network</strong>. Reviews are interlinked - they contribute to and draw from one another - enhancing coherence, reducing duplication, and enabling <strong>methodological harmonization</strong> across studies.
   </p>
 
   <p>
