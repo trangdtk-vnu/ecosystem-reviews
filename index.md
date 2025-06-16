@@ -12,7 +12,7 @@ title: Home
 
 <div style="max-width: 900px; margin: 2rem auto; line-height: 1.6; font-size: 1.05rem;">
   <p>
-    <strong>This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions.
+    This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions.
   </p>
 
   <p>
