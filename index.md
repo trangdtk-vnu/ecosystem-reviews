@@ -12,20 +12,17 @@ title: Home
 
 <div style="max-width: 900px; margin: 2rem auto; line-height: 1.6; font-size: 1.05rem;">
   <p>
-    <strong>Explore the Ecosystem of Reviews for Carbon Pricing</strong> - an integrated and evolving framework that combines systematic reviews, meta-analyses, and evidence maps. Together, these elements provide comprehensive, policy-relevant insights into the effects of carbon pricing.
+    <strong>This Ecosystem of Reviews is an integrated and dynamic framework that encompasses systematic reviews, meta-analyses, and evidence maps, all interacting to provide comprehensive evidence for the effects of carbon pricing, supporting robust, real-time policy decisions.
   </p>
 
   <p>
-    This ecosystem emphasizes <strong>meta-analyses of empirical, ex-post evaluations</strong> from a global perspective, aiming to evolve into a <em>living evidence base</em>. As carbon pricing schemes change over time, maintaining up-to-date, high-quality syntheses is essential for guiding effective policy responses.
+    The focus is on meta-analyses of empirical evaluations of the ex-post literature with a global perspective and the ambition to become living evidence. Turning systematic reviews and meta-analyses into living evidence is particularly indicated as carbon prices will change over time.
   </p>
 
   <p>
-    Unlike traditional reviews that operate in isolation, this approach treats each review as a node in a <strong>living, adaptive knowledge network</strong>. Reviews are interlinked - they contribute to and draw from one another - enhancing coherence, reducing duplication, and enabling <strong>methodological harmonization</strong> across studies.
+    Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
   </p>
-
-  <p>
-    The result is a resilient and responsive ecosystem that supports timely, evidence-based decisions on climate policy and fosters innovation in review methodology.
-  </p>
+  
 </div>
 
 <!-- Embedded Graph -->
