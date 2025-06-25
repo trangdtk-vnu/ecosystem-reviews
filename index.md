@@ -80,7 +80,7 @@ title: Home
         Please let us know:
       </strong>
       <em>
-        Stephan Bruns (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)
+        Stephan Bruns - stephan.bruns@uhasselt.be (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)
       </em>
     </p>
   </div>
