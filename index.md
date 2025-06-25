@@ -27,7 +27,7 @@ title: Home
 
 <!-- Embedded Graph -->
 <div class="graph-container">
-  <iframe src="/ecosystem-reviews/carbon_pricing_graph.html" width="100%" height="700" title="Carbon Pricing Graph" style="border: none;"></iframe>
+  <iframe src="https://carbonpricing.science/carbon_pricing_graph.html" width="100%" height="700" style="border: none;"></iframe>
 </div>
 
 <!-- Main Content Wrapper -->
