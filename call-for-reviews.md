@@ -48,7 +48,7 @@ Let us know what topics you're interested in, and we’ll help connect you with 
 Learn more and get involved: 🌐 [www.carbonpricing.science](https://www.carbonpricing.science)  
 
 Contact:  
-**Stephan Bruns** –  
+**Stephan Bruns**  
 📧 <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a>
 
 ---
