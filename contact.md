@@ -31,7 +31,7 @@ permalink: /contact/
   <ul class="compact-contact-list">
     <li>
       <span class="contact-icon">📧</span>
-      <em>Stephan Bruns (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)</em>
+      <em>Stephan Bruns - stephan.bruns@uhasselt.be (<a href="#" onclick="window.location.href='mailto:' + 'stephan.bruns' + '@' + 'uhasselt.be'; return false;">Email</a>)</em>
     </li>
     <li>
       <span class="contact-icon">🏢</span>
