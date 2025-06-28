@@ -44,12 +44,9 @@ Let us know what topics you're interested in, and we’ll help connect you with 
 
 ---
 
-## 📬 Interested?  
-Learn more and get involved: 🌐 [www.carbonpricing.science](https://www.carbonpricing.science)  
-
-Contact:  
-**Stephan Bruns**  
-📧 <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a>
+## 📬 Interested?
+ Reach out to stephan.bruns@uhasselt.be and/or jan.minx@pik-potsdam.de
+🛠️📈🌿 Let’s work on this together—for better evidence and smarter climate policy!
 
 ---
 
