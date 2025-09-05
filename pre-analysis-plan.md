@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Protocol Template
-nav_order: 5
 ---
 
 # Protocol Template
