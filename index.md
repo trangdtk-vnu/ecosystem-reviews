@@ -16,7 +16,7 @@ title: Home
   </p>
 
   <p>
-    The focus is on meta-analyses of empirical evaluations of the ex-post literature with a global perspective and the ambition to become living evidence. Turning systematic reviews and meta-analyses into living evidence is particularly indicated as carbon prices will change over time.
+    The focus is on meta-analyses of empirical evaluations of the ex-post literature that synthesize the most recent information available and ideally have the ambition to become living evidence. Turning systematic reviews and meta-analyses into living evidence is particularly indicated as carbon prices will change over time.
   </p>
 
   <p>
