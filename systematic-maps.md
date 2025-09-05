@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Systematic Map
-nav_order: 4
 ---
 
 # Systematic Map
