@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Call for Collaboration
-nav_order: 2
 ---
 
 # 🤝 Call for Collaboration  
