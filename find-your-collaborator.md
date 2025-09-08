@@ -27,7 +27,7 @@ permalink: /find-your-collaborator/
     <h3>Browse (Individuals)</h3>
     <p class="note">This table displays the latest published responses. Use the filter/search in Google Sheets for advanced views.</p>
     <div class="embed-wrap">
-      <iframe src="https://docs.google.com/spreadsheets/d/1HfqjOv6TXA5gV1Sg3DPxuErkqidtF7HL0Q2yPM5ZZlA/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=true"
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfl6_UQ-9iKiRE7KKybBakut09l3JBKs6ZyW9yLHF_gLX8eWL3QWuCHUZGHSArNKnv6pxxYqSBr-zl/pubhtml?widget=true&amp;headers=true"
               width="100%" height="800" frameborder="0" title="Individuals responses">
       </iframe>
     </div>
@@ -47,7 +47,7 @@ permalink: /find-your-collaborator/
     <h3>Browse (Teams)</h3>
     <p class="note">This table displays the latest published responses. Use the filter/search in Google Sheets for advanced views.</p>
     <div class="embed-wrap">
-      <iframe src="https://docs.google.com/spreadsheets/d/1TPWt_qw8WN7On_nFc0pHo2zBI_DKnbS9oLc-5AMIrmM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=true"
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?widget=true&amp;headers=true"
               width="100%" height="800" frameborder="0" title="Teams responses">
       </iframe>
     </div>
@@ -55,7 +55,7 @@ permalink: /find-your-collaborator/
 
   <details class="privacy">
     <summary>Privacy & Moderation</summary>
-    <p>By submitting, you consent to display of the information you provide on this page. Please avoid sharing sensitive personal data. If you want an entry edited or removed, contact <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a> or <a href="mailto:jan.minx@pik-potsdam.de">jan.minx@pik-potsdam.de</a>.</p>
+    <p>By submitting, you consent to display of the information you provide on this page. Please avoid sharing sensitive personal data. If you want an entry edited or removed, contact **Stephan Bruns** <a href="mailto:stephan.bruns@uhasselt.be">stephan.bruns@uhasselt.be</a> and/or **Jan Minx** <a href="mailto:jan.minx@pik-potsdam.de">jan.minx@pik-potsdam.de</a>.</p>
   </details>
 </section>
 
