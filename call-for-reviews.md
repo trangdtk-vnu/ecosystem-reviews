@@ -46,7 +46,7 @@ Let us know what topics you're interested in, and we’ll help connect you with 
 ## 📬 Interested?
  Reach out to **Stephan Bruns** (stephan.bruns@uhasselt.be) and/or **Jan Minx** (jan.minx@pik-potsdam.de)
  
-🛠️📈🌿 Let’s work on this together—for better evidence and smarter climate policy!
+🛠️📈🌿 Let’s work on this together - for better evidence and smarter climate policy!
 
 ---
 
