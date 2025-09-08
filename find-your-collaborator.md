@@ -25,9 +25,9 @@ permalink: /find-your-collaborator/
     </div>
 
     <h3>Browse (Individuals)</h3>
-    <p class="note">This table displays the latest published responses. Use the filter/search in Google Sheets for advanced views.</p>
+    <p class="note">This table displays the latest published responses.</p>
     <div class="embed-wrap">
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfl6_UQ-9iKiRE7KKybBakut09l3JBKs6ZyW9yLHF_gLX8eWL3QWuCHUZGHSArNKnv6pxxYqSBr-zl/pubhtml?widget=true&amp;headers=true"
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfl6_UQ-9iKiRE7KKybBakut09l3JBKs6ZyW9yLHF_gLX8eWL3QWuCHUZGHSArNKnv6pxxYqSBr-zl/pubhtml?gid=232948407&amp;single=true&amp;widget=true&amp;headers=false"
               width="100%" height="800" frameborder="0" title="Individuals responses">
       </iframe>
     </div>
@@ -47,7 +47,7 @@ permalink: /find-your-collaborator/
     <h3>Browse (Teams)</h3>
     <p class="note">This table displays the latest published responses. Use the filter/search in Google Sheets for advanced views.</p>
     <div class="embed-wrap">
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?widget=true&amp;headers=true"
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?gid=872574261&amp;single=true&amp;widget=true&amp;headers=false"
               width="100%" height="800" frameborder="0" title="Teams responses">
       </iframe>
     </div>
