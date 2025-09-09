@@ -8,6 +8,22 @@ permalink: /find-your-collaborator/
   <h2>Find Your Collaborator</h2>
   <p>Browse collaborators and teams below. To add yourself or your team, use the buttons to open the form in a new tab.</p>
 
+  <!-- SLIDE DECK (PDF) -->
+  <div class="slide-wrap">
+    <div class="slide-aspect">
+      <object
+        data="{{ '/assets/slides/contributing.pdf#page=1&zoom=125&toolbar=0&navpanes=0&scrollbar=0' | relative_url }}"
+        type="application/pdf"
+        aria-label="Contributing to the ecosystem of reviews - slide deck">
+        <p>Your browser can’t display PDFs. <a href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open the slides (PDF)</a>.</p>
+      </object>
+    </div>
+    <div class="slide-actions">
+      <a class="btn" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open slides (PDF)</a>
+      <a class="btn ghost" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" download>Download</a>
+    </div>
+  </div>
+
   <div class="tabs">
     <button class="tab-btn active" data-target="#tab-individuals">Individuals</button>
     <button class="tab-btn" data-target="#tab-teams">Existing Teams</button>
@@ -22,7 +38,7 @@ permalink: /find-your-collaborator/
     <h3>Browse (Individuals)</h3>
     <div class="embed-wrap">
       <iframe
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfl6_UQ-9iKiRE7KKybBakut09l3JBKs6ZyW9yLHF_gLX8eWL3QWuCHUZGHSArNKnv6pxxYqSBr-zl/pubhtml?gid=1319926747&amp;single=true&amp;widget=true&amp;headers=false"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfl6_UQ-9iKiRE7KKybBakut09l3JBKs6ZyW9yLHF_gLX8eWL3QWuCHUZGHSArNKnv6pxxYqSBr-zl/pubhtml?gid=1319926747&single=true&widget=true&headers=false"
         width="100%" height="800" frameborder="0" title="Individuals responses" loading="lazy">
       </iframe>
     </div>
@@ -37,7 +53,7 @@ permalink: /find-your-collaborator/
     <h3>Browse (Existing Teams)</h3>
     <div class="embed-wrap">
       <iframe
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?widget=true&amp;headers=false"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?widget=true&headers=false"
         width="100%" height="800" frameborder="0" title="Teams responses" loading="lazy">
       </iframe>
     </div>
