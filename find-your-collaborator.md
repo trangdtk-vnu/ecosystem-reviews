@@ -6,7 +6,7 @@ permalink: /find-your-collaborator/
 
 <section class="fycollab">
   <h2>Find Your Collaborator</h2>
-  <p>Browse collaborators and teams below. To add yourself or your team, use the buttons to open the form in a new tab.</p>
+  <p>Contribute to the ecosystem of reviews for carbon pricing and help facilitate evidence-based climate policy. Below are slides from an online kick off meeting on 8. September 2025 that outline opportunities to get engaged. You can add your information to the Individuals table if you would like to contribute to a review. Existing review teams that seek additional support can use this table to find collaborators and they can also add their review topic to the Existing review teams table.</p>
 
   <!-- SLIDE DECK (PDF) -->
 <div class="slide-wrap">
@@ -21,8 +21,6 @@ permalink: /find-your-collaborator/
 
   <!-- Optional quick actions -->
   <div class="slide-actions">
-    <button class="btn ghost" data-zoom="page-fit">Fit page</button>
-    <button class="btn ghost" data-zoom="page-width">Fill width</button>
     <a class="btn" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
     <a class="btn ghost" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" download>Download</a>
   </div>
@@ -30,7 +28,7 @@ permalink: /find-your-collaborator/
 
   <div class="tabs">
     <button class="tab-btn active" data-target="#tab-individuals">Individuals</button>
-    <button class="tab-btn" data-target="#tab-teams">Existing Teams</button>
+    <button class="tab-btn" data-target="#tab-teams">Existing Review Teams</button>
   </div>
 
   <!-- INDIVIDUALS TAB -->
@@ -54,7 +52,7 @@ permalink: /find-your-collaborator/
       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfkB3p6XHlIfSkKmkUlERPZfphFM6U3jwWs07GpFv0NRxmN1A/viewform" target="_blank" rel="noopener">➕ Submit Team Entry</a>
     </div>
 
-    <h3>Browse (Existing Teams)</h3>
+    <h3>Browse (Existing Review Teams)</h3>
     <div class="embed-wrap">
       <iframe
         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?widget=true&headers=false"
