@@ -9,20 +9,24 @@ permalink: /find-your-collaborator/
   <p>Browse collaborators and teams below. To add yourself or your team, use the buttons to open the form in a new tab.</p>
 
   <!-- SLIDE DECK (PDF) -->
-  <div class="slide-wrap">
-    <div class="slide-aspect">
-      <object
-        data="{{ '/assets/slides/contributing.pdf#page=1&zoom=125&toolbar=0&navpanes=0&scrollbar=0' | relative_url }}"
-        type="application/pdf"
-        aria-label="Contributing to the ecosystem of reviews - slide deck">
-        <p>Your browser can’t display PDFs. <a href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open the slides (PDF)</a>.</p>
-      </object>
-    </div>
-    <div class="slide-actions">
-      <a class="btn" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open slides (PDF)</a>
-      <a class="btn ghost" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" download>Download</a>
-    </div>
+<div class="slide-wrap">
+  <div class="slide-aspect">
+    <object
+      data="{{ '/assets/slides/contributing.pdf#page=1&zoom=page-fit&toolbar=0&navpanes=0' | relative_url }}"
+      type="application/pdf"
+      aria-label="Contributing to the ecosystem of reviews - slide deck">
+      <p>Your browser can’t display PDFs. <a href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open the slides (PDF)</a>.</p>
+    </object>
   </div>
+
+  <!-- Optional quick actions -->
+  <div class="slide-actions">
+    <button class="btn ghost" data-zoom="page-fit">Fit page</button>
+    <button class="btn ghost" data-zoom="page-width">Fill width</button>
+    <a class="btn" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
+    <a class="btn ghost" href="{{ '/assets/slides/contributing.pdf' | relative_url }}" download>Download</a>
+  </div>
+</div>
 
   <div class="tabs">
     <button class="tab-btn active" data-target="#tab-individuals">Individuals</button>
