@@ -24,9 +24,9 @@
         }
         svg {
             display: block;
-            width: 80vw;  /* Slightly larger to prevent cutting */
-            height: 80vh; /* Slightly larger to prevent cutting */
-            overflow: visible; /* Ensure all nodes render */
+            width: 80vw;
+            height: 80vh;
+            overflow: visible;
         }
         .node {
             stroke: #0077b6;
@@ -68,18 +68,29 @@
         .attr("width", width)
         .attr("height", height);
 
+    // ✅ Define gradient for dual-color node
+    const defs = svg.append("defs");
+
+    const gradient = defs.append("linearGradient")
+        .attr("id", "white-yellow")
+        .attr("x1", "0%").attr("y1", "0%")
+        .attr("x2", "100%").attr("y2", "0%");
+
+    gradient.append("stop").attr("offset", "0%").attr("stop-color", "white");
+    gradient.append("stop").attr("offset", "100%").attr("stop-color", "yellow");
+
     const nodes = [
         { id: "Ex-post Evidence\non Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true, color: "white" },
         { id: "Effectiveness", color: "green" },
         { id: "Labour market", color: "yellow" },
         { id: "Innovation", color: "yellow" },
         { id: "Leakage", color: "white" },
-        { id: "Public perception", color: "white" },
+        { id: "Public perception", color: "url(#white-yellow)" }, // ✅ gradient applied
         { id: "Competitiveness", color: "white" },
         { id: "Distribution", color: "white" },
         { id: "...", color: "white" },
         { id: "Carbon Intensity", color: "yellow" },
-        {id: "Market Efficiency", color: "yellow"}
+        { id: "Market Efficiency", color: "yellow" }
     ];
 
     const links = nodes.slice(1).map(node => ({ source: nodes[0], target: node }));
@@ -87,10 +98,10 @@
     const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id).distance(180)) 
         .force("charge", d3.forceManyBody().strength(-1000)) 
-        .force("center", d3.forceCenter(width / 2, height / 2)) // Ensures it remains centered
-        .force("collision", d3.forceCollide().radius(90)) // Increased radius for better spacing
-        .force("x", d3.forceX(width / 2).strength(0.05)) // Keep nodes within the boundaries
-        .force("y", d3.forceY(height / 2).strength(0.05)) // Keep nodes within the boundaries
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collision", d3.forceCollide().radius(90))
+        .force("x", d3.forceX(width / 2).strength(0.05))
+        .force("y", d3.forceY(height / 2).strength(0.05))
         .on("tick", ticked);
 
     const link = svg.selectAll(".link")
@@ -104,7 +115,7 @@
         .attr("class", "node")
         .attr("rx", d => d.fixed ? 110 : 75) 
         .attr("ry", d => d.fixed ? 50 : 35)
-        .style("fill", d => d.color)
+        .style("fill", d => d.color) // ✅ gradient will work here
         .call(d3.drag()
             .on("start", dragStarted)
             .on("drag", dragged)
