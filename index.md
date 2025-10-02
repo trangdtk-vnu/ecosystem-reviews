@@ -37,15 +37,39 @@ title: Home
   <div class="legend-box">
     <h2>Legend</h2>
 
+    <!-- AVAILABLE -->
     <div class="legend-item">
       <div class="color-dot finished"></div>
-      <div class="legend-text">
-        <strong>Published and living evidence in progress:</strong> Effectiveness –  
-        <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank" rel="noopener noreferrer">Published Paper</a><br>
-        <em>Contact: Niklas Döbbeling-Hildebrandt (<a href="#" onclick="window.location.href='mailto:' + 'niklas.doebbeling-hildebrandt' + '@' + 'pik-potsdam.de'; return false;">Email</a>)</em>
+      <div class="legend-text"><strong>Available:</strong></div>
+    </div>
+    
+    <div class="sub-items">
+      <div>
+        Effectiveness
+        <ul>
+          <li>
+            Döbbeling-Hildebrandt, N., Miersch, K., Khanna, T. M., Bachelet, M., Bruns, S. B., Callaghan, M., ... & Minx, J. C. (2024). Systematic review and meta-analysis of ex-post evaluations on the effectiveness of carbon pricing. Nature Communications, 15(1), 4147.
+            </a>
+          </li>
+          <li>
+              Saran, A., Ojiambo, K. O., Munubi, B., Mohan, A., Armadi, J., Guo, N., Young, S., White, H., & Waddington, H. S. (2025). Carbon Pricing Interventions in East Africa: A Rapid Evidence Assessment. Foreign, Commonwealth & Development Office.
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        Public Perception
+        <ul>
+          <li>
+            Mohammadzadeh Valencia, F., Mohren, C., Ramakrishnan, A., Merchert, M., Minx, J. C., & Steckel, J. C. (2024). Public support for carbon pricing policies and revenue recycling options: a systematic review and meta-analysis of the survey literature. npj Climate Action, 3(1), 74.
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
+    <!-- IN PROGRESS -->
     <div class="legend-item">
       <div class="color-dot in-progress"></div>
       <div class="legend-text"><strong>In Progress:</strong></div>
@@ -58,6 +82,7 @@ title: Home
       <div>Labour Market – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
     </div>
 
+    <!-- NEEDS REVIEW -->
     <div class="legend-item">
       <div class="color-dot needs-review"></div>
       <div class="legend-text">
@@ -65,6 +90,7 @@ title: Home
       </div>
     </div>
   </div>
+</div>
 
   <!-- Table Section -->
   <div class="table-container">
