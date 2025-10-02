@@ -92,6 +92,8 @@ title: Home
         <strong>Needs Review:</strong> Leakage, Distribution, Public Perception, Competitiveness
       </div>
     </div>
+
+  </div>  
     
   <!-- Table Section -->
   <div class="table-container">
