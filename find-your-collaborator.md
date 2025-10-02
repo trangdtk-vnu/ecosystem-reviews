@@ -46,20 +46,24 @@ permalink: /find-your-collaborator/
     </div>
   </div>
 
-  <!-- TEAMS TAB -->
-  <div id="tab-teams" class="tab-panel">
-    <div class="cta">
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfkB3p6XHlIfSkKmkUlERPZfphFM6U3jwWs07GpFv0NRxmN1A/viewform" target="_blank" rel="noopener">➕ Submit Team Entry</a>
-    </div>
-
-    <h3>Browse (Existing Review Teams)</h3>
-    <div class="embed-wrap">
-      <iframe
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2E5A8uKZcCqP4PV1ZZ0wFinUwLqRoZqJD4ebCKpZhFAoF-ENRRjo6-wXtiMiQeoJIJt4reOShtY8W/pubhtml?widget=true&headers=false"
-        width="100%" height="800" frameborder="0" title="Teams responses" loading="lazy">
-      </iframe>
-    </div>
+<!-- TEAMS TAB -->
+<div id="tab-teams" class="tab-panel">
+  <div class="cta">
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfkB3p6XHlIfSkKmkUlERPZfphFM6U3jwWs07GpFv0NRxmN1A/viewform" target="_blank" rel="noopener">➕ Suggest a Review Team</a>
+    <p class="note">
+      Submissions are reviewed by the coordination team before publication.  
+      Only approved entries will appear in the list below.
+    </p>
   </div>
+
+  <h3>Browse (Existing Review Teams)</h3>
+  <div class="embed-wrap">
+    <iframe
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRic6UZPRcVK2qTsxcA-x6cuayZCfsoPhaaJKL9-IZ-grFKus5XOBjkQT3At6i-wkonQPXYB70Oaw9/pubhtml?widget=true&amp;headers=false"
+      width="100%" height="800" frameborder="0" title="Teams responses" loading="lazy">
+    </iframe>
+  </div>
+</div>
 
   <details class="privacy">
     <summary>Privacy & Moderation</summary>
