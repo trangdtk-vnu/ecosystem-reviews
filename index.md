@@ -42,18 +42,20 @@ title: Home
       <div class="color-dot finished"></div>
       <div class="legend-text"><strong>Available:</strong></div>
     </div>
-    
+
     <div class="sub-items">
       <div>
         Effectiveness
         <ul>
           <li>
-            Döbbeling-Hildebrandt, N., Miersch, K., Khanna, T. M., Bachelet, M., Bruns, S. B., Callaghan, M., ... & Minx, J. C. (2024). Systematic review and meta-analysis of ex-post evaluations on the effectiveness of carbon pricing. Nature Communications, 15(1), 4147.
-            </a>
+            Döbbeling-Hildebrandt, N., Miersch, K., Khanna, T. M., Bachelet, M., Bruns, S. B., Callaghan, M., … & Minx, J. C. (2024). 
+            <em>Systematic review and meta-analysis of ex-post evaluations on the effectiveness of carbon pricing.</em> 
+            <a href="https://www.nature.com/articles/s41467-024-48512-w" target="_blank" rel="noopener">Nature Communications, 15(1), 4147</a>.
           </li>
           <li>
-              Saran, A., Ojiambo, K. O., Munubi, B., Mohan, A., Armadi, J., Guo, N., Young, S., White, H., & Waddington, H. S. (2025). Carbon Pricing Interventions in East Africa: A Rapid Evidence Assessment. Foreign, Commonwealth & Development Office.
-            </a>
+            Saran, A., Ojiambo, K. O., Munubi, B., Mohan, A., Armadi, J., Guo, N., Young, S., White, H., & Waddington, H. S. (2025). 
+            <em>Carbon Pricing Interventions in East Africa: A Rapid Evidence Assessment.</em> 
+            <a href="https://www.evidencefund.com/lib/XT7FNLQQ/XT7FNLQQ" target="_blank" rel="noopener">Foreign, Commonwealth & Development Office</a>.
           </li>
         </ul>
       </div>
@@ -62,8 +64,9 @@ title: Home
         Public Perception
         <ul>
           <li>
-            Mohammadzadeh Valencia, F., Mohren, C., Ramakrishnan, A., Merchert, M., Minx, J. C., & Steckel, J. C. (2024). Public support for carbon pricing policies and revenue recycling options: a systematic review and meta-analysis of the survey literature. npj Climate Action, 3(1), 74.
-            </a>
+            Mohammadzadeh Valencia, F., Mohren, C., Ramakrishnan, A., Merchert, M., Minx, J. C., & Steckel, J. C. (2024). 
+            <em>Public support for carbon pricing policies and revenue recycling options: a systematic review and meta-analysis of the survey literature.</em> 
+            <a href="https://www.nature.com/articles/s44168-024-00153-x" target="_blank" rel="noopener">npj Climate Action, 3(1), 74</a>.
           </li>
         </ul>
       </div>
@@ -76,8 +79,8 @@ title: Home
     </div>
 
     <div class="sub-items">
-      <div>Innovation – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
-      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="#" onclick="window.location.href='mailto:' + 'MiLim.Kim' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
+      <div>Innovation – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em</div>
+      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="#" onclick="window.location.href='mailto:' + 'MiLim.Kim' + '@' + 'anu.edu.au'; return false;">Email</a>)</em</div>
       <div>Market Efficiency – <em>Contact: Banna Banik (<a href="#" onclick="window.location.href='mailto:' + 'Banna.Banik' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
       <div>Labour Market – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
     </div>
@@ -89,9 +92,7 @@ title: Home
         <strong>Needs Review:</strong> Leakage, Distribution, Public Perception, Competitiveness
       </div>
     </div>
-  </div>
-</div>
-
+    
   <!-- Table Section -->
   <div class="table-container">
     <h2>External Systematic Reviews</h2>
