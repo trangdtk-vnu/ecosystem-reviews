@@ -22,7 +22,6 @@ title: Home
   <p>
     Unlike traditional reviews that often exist in disciplinary or temporal isolation, this approach treats reviews not as standalone outputs but as interdependent nodes in a living, adaptive knowledge network. Each review contributes to and draws from others within the system, fostering coherence, reducing redundancy, and enabling methodological harmonization to ensure comparability and uphold quality standards.
   </p>
-  
 </div>
 
 <!-- Embedded Graph -->
@@ -79,8 +78,8 @@ title: Home
     </div>
 
     <div class="sub-items">
-      <div>Innovation – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em</div>
-      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="#" onclick="window.location.href='mailto:' + 'MiLim.Kim' + '@' + 'anu.edu.au'; return false;">Email</a>)</em</div>
+      <div>Innovation – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
+      <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="#" onclick="window.location.href='mailto:' + 'MiLim.Kim' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
       <div>Market Efficiency – <em>Contact: Banna Banik (<a href="#" onclick="window.location.href='mailto:' + 'Banna.Banik' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
       <div>Labour Market – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
     </div>
@@ -88,13 +87,20 @@ title: Home
     <!-- NEEDS REVIEW -->
     <div class="legend-item">
       <div class="color-dot needs-review"></div>
-      <div class="legend-text">
-        <strong>Needs Review:</strong> Leakage, Distribution, Public Perception, Competitiveness
-      </div>
+      <div class="legend-text"><strong>Needs Review:</strong></div>
     </div>
 
-  </div>  
-    
+    <div class="sub-items">
+      <ul>
+        <li>Leakage</li>
+        <li>Distribution</li>
+        <li>Public Perception</li>
+        <li>Competitiveness</li>
+      </ul>
+    </div>
+
+  </div> <!-- END legend-box -->
+
   <!-- Table Section -->
   <div class="table-container">
     <h2>External Systematic Reviews</h2>
@@ -114,4 +120,4 @@ title: Home
     </p>
   </div>
 
-</div>
+</div> <!-- END stacked-container -->
