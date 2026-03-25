@@ -82,10 +82,10 @@
     const nodes = [
         { id: "Ex-post Evidence\non Carbon Pricing", fx: width / 2, fy: height / 2, fixed: true, color: "white" },
         { id: "Effectiveness", color: "green" },
-        { id: "Labour market", color: "yellow" },
+        { id: "Labour market", color: "white" },
         { id: "Innovation", color: "yellow" },
         { id: "Leakage", color: "white" },
-        { id: "Public perception", color: "url(#white-yellow)" }, // ✅ gradient applied
+        { id: "Public perception", color: "url(#white-yellow)" },
         { id: "Competitiveness", color: "white" },
         { id: "Distribution", color: "white" },
         { id: "...", color: "white" },
@@ -116,7 +116,7 @@
         .attr("class", "node")
         .attr("rx", d => d.fixed ? 110 : 75) 
         .attr("ry", d => d.fixed ? 50 : 35)
-        .style("fill", d => d.color) // ✅ gradient will work here
+        .style("fill", d => d.color)
         .call(d3.drag()
             .on("start", dragStarted)
             .on("drag", dragged)
