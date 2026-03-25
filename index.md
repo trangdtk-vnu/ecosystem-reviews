@@ -82,7 +82,7 @@ title: Home
       <div>Carbon Intensity – <em>Contact: Mi Lim Kim (<a href="#" onclick="window.location.href='mailto:' + 'MiLim.Kim' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
       <div>Market Efficiency – <em>Contact: Banna Banik (<a href="#" onclick="window.location.href='mailto:' + 'Banna.Banik' + '@' + 'anu.edu.au'; return false;">Email</a>)</em></div>
       <div>Health - <em>Contact: Tobias Magnus Schuster (<a href="#" onclick="window.location.href='mailto:' + 'Tobias.Schuster' + '@' + 'lshtm.ac.uk'; return false;">Email</a>)</em></div>
-      <div>Labour Market – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
+      <div>Public Perception – <em>Contact: Trang Dong (<a href="#" onclick="window.location.href='mailto:' + 'trang.dong' + '@' + 'uhasselt.be'; return false;">Email</a>)</em></div>
     </div>
 
     <!-- NEEDS REVIEW -->
@@ -95,7 +95,7 @@ title: Home
       <ul>
         <li>Leakage</li>
         <li>Distribution</li>
-        <li>Public Perception</li>
+        <li>Labour Market</li>
         <li>Competitiveness</li>
       </ul>
     </div>
